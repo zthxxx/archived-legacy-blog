@@ -1,36 +1,36 @@
 # Menus
 menu:
-  Home: .
-  Archives: archives
-  Categories: categories
-  Tags: tags
-  About: about
+  首页: /
+  归档: /archives
+  分类: /categories
+  标签: /tags
+  关于: /about
 
 # Customize
 customize:
     logo:
         enabled: true
-        width: 40
-        height: 40
-        url: images/logo.png
+        width: 50
+        height: 50
+        url: /logo.png
     profile:
         enabled: true # Whether to show profile bar
-        avatar: css/images/avatar.png
-        gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
-        author: PPOffice
-        author_title: Web Developer & Designer
-        location: Harbin, China
-        follow: https://github.com/ppoffice/
+        avatar: # css/images/avatar.png
+        gravatar: zth_9451@qq.com # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
+        author: Tian
+        author_title: Designer & Programmer
+        location: Chengdu, China
+        follow: https://github.com/zthxxx/
     highlight: monokai
     sidebar: right # sidebar position, options: left, right
     thumbnail: true # enable posts thumbnail, options: true, false
-    favicon: # path to favicon
+    favicon: /favicon.ico # path to favicon
     social_links:
-        github: http://github.com/ppoffice/hexo-theme-icarus
-        twitter: /
-        facebook: /
-        dribbble: /
-        rss: /
+        github: https://github.com/zthxxx/zthxxx.github.io
+        twitter: 
+        facebook: 
+        dribbble: 
+        rss: 
     social_link_tooltip: true # enable the social link tooltip, options: true, false
 
 # Widgets
@@ -74,3 +74,5 @@ miscellaneous:
         google_plus:
     links:
         Hexo: http://hexo.io
+        Saber酱: http://www.saber.我爱你/website
+        Manjusak: http://manjusaka.itscoder.com/
