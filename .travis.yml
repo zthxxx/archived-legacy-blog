@@ -7,11 +7,15 @@ branches:
   - writing
 
 before_install:
-- npm install -g hexo
-- npm install -g hexo-cli
+- sudo npm install -g hexo
+- sudo npm install -g hexo-cli
+- sudo npm install -g hexo-generator-json-content
+- sudo npm install -g hexo-generator-sitemap
+- sudo npm install -g hexo-generator-baidu-sitemap
+- sudo npm install -g hexo-generator-feed
 
 install:
-- npm install
+- sudo npm install
 
 before_script:
 - git config --global user.name 'zthxxx'
@@ -20,8 +24,8 @@ before_script:
 - sed -i'' "s~git@github.com:zthxxx/zthxxx.github.io.git~https://${REPO_TOKEN}:x-oauth-basic@github.com/zthxxx/zthxxx.github.io.git~" _config.yml
 - cp themes/icarus/_config.yml.example themes/icarus/_config.yml
 
-- hexo init test_blog
-- cd test_blog
+# - hexo init test_blog
+# - cd test_blog
 
 script:
 - hexo clean
