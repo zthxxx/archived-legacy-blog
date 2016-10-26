@@ -45,3 +45,14 @@
 <% if (!index) { %>
     <%- partial('comment/index') %>
 <% } %>
+
+<% if (!index){ %>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//www.zthxxx.top/js/baidu_push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>     
+<% } %>
