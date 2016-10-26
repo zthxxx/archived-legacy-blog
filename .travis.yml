@@ -24,15 +24,16 @@ before_script:
 - sed -i'' "s~git@github.com:zthxxx/zthxxx.github.io.git~https://${REPO_TOKEN}:x-oauth-basic@github.com/zthxxx/zthxxx.github.io.git~" _config.yml
 - cp themes/icarus/_config.yml.example themes/icarus/_config.yml
 
-- hexo init test_blog
-- cd test_blog
-- npm install hexo-generator-json-content
-- npm install hexo-generator-sitemap
-- npm install hexo-generator-baidu-sitemap
-- npm install hexo-generator-feed
+# - hexo init test_blog
+# - cd test_blog
+# - npm install hexo-generator-json-content
+# - npm install hexo-generator-sitemap
+# - npm install hexo-generator-baidu-sitemap
+# - npm install hexo-generator-feed
 
 script:
 - hexo clean
+- ls -al
 - hexo generate
 - ls -al public
 
