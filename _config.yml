@@ -8,7 +8,7 @@ subtitle: Life is short, you need python.
 description: This is TianMao`s blog.
 author: Tian
 language: en
-timezone:
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -61,7 +61,7 @@ time_format: HH:mm:ss
 per_page: 5
 pagination_dir: page
 
-# 自动生成sitemap
+# Creat sitemap
 sitemap:
   path: sitemap.xml
 baidusitemap:

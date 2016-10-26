@@ -1,5 +1,8 @@
 language: node_js
+node_js:
+  - "6"
 dist: trusty
+sudo: required
 
 branches:
   only:
@@ -8,15 +11,10 @@ branches:
 before_install:
 - npm install -g hexo
 - npm install -g hexo-cli
-# - npm install hexo-generator-json-content
-# - npm install hexo-generator-sitemap
-# - npm install hexo-generator-baidu-sitemap
-# - npm install hexo-generator-feed
 
 install:
 - npm install
-# - npm uninstall hexo-generator-json-content
-# - npm install hexo-generator-json-content
+- npm uninstall hexo-generator-json-content
 
 before_script:
 - git config --global user.name 'zthxxx'
