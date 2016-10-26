@@ -1,0 +1,20 @@
+language: node_js
+branches:
+  only:
+  - writing
+before_install:
+- npm install -g hexo
+- npm install -g hexo-cli
+- npm install
+before_script:
+- git config --global user.name 'zthxxx'
+- git config --global user.email 'zth_9451@qq.com'
+- echo ${REPO_TOKEN}
+- sed -i'' "s~git@github.com:zthxxx/zthxxx.github.io.git~https://${REPO_TOKEN}:x-oauth-basic@github.com/zthxxx/zthxxx.github.io.git~" _config.yml
+install:
+- npm install
+script:
+- hexo clean
+- hexo generate
+after_success:
+- hexo deploy
