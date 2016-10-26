@@ -7,7 +7,7 @@ __COMMENTS__='
 # sudo: required
 # need "GIT_USER_NAME" "GIT_USER_EMAIL" "REPO_TOKEN" "BAIDU_ANALYTICS" variable in env.
 # how to use: in travis, use the script to run:
-#    souce travis_env_init.sh
+#    ./travis_env_init.sh
 '
 
 
