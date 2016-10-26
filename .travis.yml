@@ -18,10 +18,9 @@ install:
 before_script:
 - git_user_name="zthxxx"
 - git_user_email="zth_9451@qq.com"
-- git_post_repertory="zthxxx.github.io"
 - git config --global user.name "${git_user_name}"
 - git config --global user.email "${git_user_email}"
-- sed -i'' "s~git@github.com:${git_user_name}/${git_post_repertory}.git~https://${REPO_TOKEN}:x-oauth-basic@github.com/${git_user_name}/${git_post_repertory}.git~" _config.yml
+- sed -i'' "s~git@github.com:~https://${REPO_TOKEN}@github.com/~" _config.yml
 - cp themes/icarus/_config.yml.example themes/icarus/_config.yml
 
 script:
