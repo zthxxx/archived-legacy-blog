@@ -14,7 +14,6 @@ before_install:
 
 install:
 - npm install
-- npm uninstall hexo-generator-json-content
 
 before_script:
 - git config --global user.name 'zthxxx'
