@@ -10,8 +10,8 @@ menu:
 customize:
     logo:
         enabled: true
-        width: 50
-        height: 50
+        width: 40
+        height: 40
         url: /logo.png
     profile:
         enabled: true # Whether to show profile bar
