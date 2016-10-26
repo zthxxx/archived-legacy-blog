@@ -7,15 +7,15 @@ branches:
   - writing
 
 before_install:
-- sudo npm install -g hexo
-- sudo npm install -g hexo-cli
-- sudo npm install -g hexo-generator-json-content
-- sudo npm install -g hexo-generator-sitemap
-- sudo npm install -g hexo-generator-baidu-sitemap
-- sudo npm install -g hexo-generator-feed
+- npm install -g hexo
+- npm install -g hexo-cli
+- npm install hexo-generator-json-content
+- npm install hexo-generator-sitemap
+- npm install hexo-generator-baidu-sitemap
+- npm install hexo-generator-feed
 
 install:
-- sudo npm install
+- npm install
 
 before_script:
 - git config --global user.name 'zthxxx'
