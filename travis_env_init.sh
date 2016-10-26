@@ -6,8 +6,10 @@ __COMMENTS__='
 # npm: 3.10.8
 # sudo: required
 # need "GIT_USER_NAME" "GIT_USER_EMAIL" "REPO_TOKEN" "BAIDU_ANALYTICS" variable in env.
-# how to use: in travis, use the script to run:
+# how to use: in travis, use the script to run, eg:
+#    sh travis_env_init.sh
 #    ./travis_env_init.sh
+#    souce travis_env_init.sh
 '
 
 
