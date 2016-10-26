@@ -9,7 +9,8 @@ branches:
   - writing
 
 install:
-- ./travis_env_init.sh
+- ls -al
+- sh travis_env_init.sh
 
 script:
 - hexo clean
