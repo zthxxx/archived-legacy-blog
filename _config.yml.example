@@ -39,7 +39,6 @@ widgets:
     - category
     - archive
     - tag
-    - tagcloud
     - links
 
 # Search
