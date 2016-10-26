@@ -16,6 +16,7 @@ before_install:
 
 install:
 - npm install
+- npm uninstall hexo-generator-json-content
 
 before_script:
 - git config --global user.name 'zthxxx'
@@ -23,8 +24,6 @@ before_script:
 - echo ${REPO_TOKEN}
 - sed -i'' "s~git@github.com:zthxxx/zthxxx.github.io.git~https://${REPO_TOKEN}:x-oauth-basic@github.com/zthxxx/zthxxx.github.io.git~" _config.yml
 - cp themes/icarus/_config.yml.example themes/icarus/_config.yml
-
-
 
 script:
 - hexo clean
