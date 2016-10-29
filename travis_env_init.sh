@@ -17,7 +17,7 @@ node --version
 npm --version
 
 echo "Hexo environment pre install start."
-echo ${__COMMENTS__}
+echo "${__COMMENTS__}"
 
 npm install -g hexo
 npm install -g hexo-cli
@@ -30,5 +30,5 @@ sed -i'' "s~git@github.com:~https://${GIT_REPO_TOKEN}@github.com/~" _config.yml
 cp themes/icarus/_config.yml.example themes/icarus/_config.yml
 sed -i'' "s~baidu_analytics: ~baidu_analytics: ${BAIDU_ANALYTICS} ~" themes/icarus/_config.yml
 sed -i'' "s~duoshuo: ~duoshuo: ${DuoShuo_SHORT_NAME} ~" themes/icarus/_config.yml
-echo ${REPO_TOKEN}
+
 echo "Hexo environment pre install complete OK."
