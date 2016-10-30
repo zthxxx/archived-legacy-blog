@@ -96,4 +96,6 @@ if sidebar is left
     #profile
         float: right
 
-@import "style.opacity"
+Opacity = hexo-config("customize.opacity.enable")
+if Opacity
+    @import "style.opacity"
