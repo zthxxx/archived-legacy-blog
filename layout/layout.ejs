@@ -14,5 +14,13 @@
         <%- partial('common/footer', null, {cache: !config.relative_link}) %>
         <%- partial('common/scripts') %>
     </div>
+    <% if (theme.customize.opacity.enable) { %>
+        <% if (theme.customize.opacity.background_images_count) { %>
+            <script type="text/javascript">
+                var background_image_index = ~~(Math.random() * <%- theme.customize.opacity.background_images_count %>);
+                document.body.style.backgroundImage="url(/images/background/img_"+background_image_index+".jpg)";
+            </script>
+        <% } %>
+    <% } %>
 </body>
 </html>
