@@ -30,8 +30,9 @@ body::after{
     box-shadow: 0 0 0 5px rgba(255,255,255,0.3);
     transition: box-shadow linear 0.2s;
 }
-#profile.card, .timeline-row .content {
-    background-color: rgba(0,0,0,0.6);
+.timeline-row .content {background-color: rgba(0,0,0,0.5);}
+#profile.card {
+    background-color: rgba(0,0,0,0.7);
     box-shadow: 0 0 0 8px rgba(255,255,255,0.4);
 }
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
@@ -93,7 +94,9 @@ p, .article-entry ul ul, .widget ul ul, .article-entry ol ul, .widget ol ul, .ar
 .layout-title .archive-year  {
     color: #38b7ea;
 }
-
+.article-share-twitter:before, .article-share-facebook:before, .article-share-pinterest:before, .article-share-google:before {
+    color: #444;
+}
 /* Article links style */
 #header a, #header a:hover, #recent-post li .item-inner .item-title a:hover, .widget ul .category-list-child a:hover {
     white-space: nowrap;
