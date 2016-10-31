@@ -39,9 +39,13 @@ sed -i'' "s~duoshuo: ~duoshuo: ${DuoShuo_SHORT_NAME} ~" "${theme_config_file}"
 if [ ! ${icarus_opacity_disable} ]
 then
     echo "Enable icarus opacity version."
-    sed -i'' "s~enable: false # Is choose the opacity version of this theme~enable: true # ~" "${theme_config_file}"
-    background_images_count=$(sudo ./rename_BGI.sh)
-    sed -i'' "s~background_images_count: 0 ~background_images_count: ${background_images_count} ~" "${theme_config_file}"
+    ls -al
+    background_images_count=$(souce ./rename_BGI.sh)
+    if [ $? -eq 0 ]
+    then
+        sed -i'' "s~enable: false # Is choose the opacity version of this theme~enable: true # ~" "${theme_config_file}"
+        sed -i'' "s~background_images_count: 0 ~background_images_count: ${background_images_count} ~" "${theme_config_file}"
+    fi
 fi
 
 ls -al source/images/background/
