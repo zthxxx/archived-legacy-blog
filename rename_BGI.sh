@@ -1,5 +1,6 @@
 #!/bin/bash
 pwd
+ls
 ls -al
 cd ./source/images/background
 

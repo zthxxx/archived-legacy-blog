@@ -44,7 +44,7 @@ then
     echo "Enable icarus opacity version."
     chmod +x  rename_BGI.sh
     ls -al
-    background_images_count=$(./rename_BGI.sh)
+    background_images_count=$(sh rename_BGI.sh)
     if [ $? -eq 0 ]
     then
         sed -i'' "s~enable: false # Is choose the opacity version of this theme~enable: true # ~" "${theme_config_file}"
