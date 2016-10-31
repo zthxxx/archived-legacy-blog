@@ -25,7 +25,6 @@ npm install -g hexo-cli > /dev/null
 npm install > /dev/null
 
 echo "hexo and packages install complete."
-pwd
 
 git config --global user.name "${GIT_USER_NAME}"
 git config --global user.email "${GIT_USER_EMAIL}"
@@ -42,7 +41,6 @@ sed -i'' "s~duoshuo: ~duoshuo: ${DuoShuo_SHORT_NAME} ~" "${theme_config_file}"
 if [ ! ${icarus_opacity_disable} ]
 then
     echo "Enable icarus opacity version."
-    ls -al
     background_images_count=$(source rename_BGI.sh)
     if [ $? -eq 0 ]
     then
@@ -51,7 +49,6 @@ then
     fi
 fi
 
-ls -al source/images/background/
 cat "${theme_config_file}"
 
 echo "Hexo environment pre install complete OK."

@@ -1,7 +1,4 @@
 #!/bin/bash
-pwd
-ls
-ls -al
 cd ./source/images/background
 
 img_index=0
