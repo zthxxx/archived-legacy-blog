@@ -28,7 +28,7 @@ customize:
     social_links:
         github: https://github.com/zthxxx/zthxxx.github.io
         weibo: 
-        facebook: 
+        stack-overflow: 
         rss: http://www.zthxxx.top/atom.xml
     social_link_tooltip: true # enable the social link tooltip, options: true, false
     opacity:
