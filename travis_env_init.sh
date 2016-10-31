@@ -6,6 +6,7 @@ __COMMENTS__='
 # npm: 3.10.8
 # sudo: required
 # need "GIT_USER_NAME" "GIT_USER_EMAIL" "GIT_REPO_TOKEN" "BAIDU_ANALYTICS" "DuoShuo_SHORT_NAME" variable in env.
+# env variable "icarus_opacity_disable" to control icarus opacity version display enable or disable.
 # how to use: in travis, use the script to run, eg:
 #    sh travis_env_init.sh
 #    ./travis_env_init.sh
@@ -35,9 +36,13 @@ sed -i'' "s~baidu_analytics: ~baidu_analytics: ${BAIDU_ANALYTICS} ~" "${theme_co
 # Set duoShuo commentary short name
 sed -i'' "s~duoshuo: ~duoshuo: ${DuoShuo_SHORT_NAME} ~" "${theme_config_file}"
 # Set icarus theme opacity version config
-sed -i'' "s~enable: false # Is choose the opacity version of this theme~enable: true # ~" "${theme_config_file}"
-background_images_count=$(./rename_BGI.sh)
-sed -i'' "s~background_images_count: 0 ~background_images_count: ${background_images_count} ~" "${theme_config_file}"
+if [ ! ${icarus_opacity_disable} ]
+then
+    echo "Enable icarus opacity version."
+    sed -i'' "s~enable: false # Is choose the opacity version of this theme~enable: true # ~" "${theme_config_file}"
+    background_images_count=$(sudo ./rename_BGI.sh)
+    sed -i'' "s~background_images_count: 0 ~background_images_count: ${background_images_count} ~" "${theme_config_file}"
+fi
 
 ls -al source/images/background/
 cat "${theme_config_file}"
