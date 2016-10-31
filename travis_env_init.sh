@@ -10,7 +10,7 @@ __COMMENTS__='
 # how to use: in travis, use the script to run, eg:
 #    sh travis_env_init.sh
 #    ./travis_env_init.sh
-#    souce travis_env_init.sh
+#    source travis_env_init.sh
 '
 
 
@@ -20,9 +20,9 @@ npm --version
 echo "Hexo environment pre install start."
 echo "${__COMMENTS__}"
 
-npm install -g hexo
-npm install -g hexo-cli
-npm install
+npm install -g hexo > /dev/null
+npm install -g hexo-cli > /dev/null
+npm install > /dev/null
 
 echo "hexo and packages install complete."
 pwd
@@ -42,9 +42,9 @@ sed -i'' "s~duoshuo: ~duoshuo: ${DuoShuo_SHORT_NAME} ~" "${theme_config_file}"
 if [ ! ${icarus_opacity_disable} ]
 then
     echo "Enable icarus opacity version."
-    chmod +x  rename_BGI.sh
+    chmod +x ./rename_BGI.sh
     ls -al
-    background_images_count=$(sh rename_BGI.sh)
+    background_images_count=$($(pwd)/rename_BGI.sh)
     if [ $? -eq 0 ]
     then
         sed -i'' "s~enable: false # Is choose the opacity version of this theme~enable: true # ~" "${theme_config_file}"
