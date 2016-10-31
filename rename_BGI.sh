@@ -1,5 +1,5 @@
 #!/bin/bash
-cd source/images/background
+cd ./source/images/background
 
 img_index=0
 file_list=()
