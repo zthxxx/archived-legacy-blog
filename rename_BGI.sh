@@ -12,7 +12,7 @@ done
 for file_name in "${file_list[@]}"
 do
     index_name="img_${img_index}_"
-    mv "${file_name}" "${index_name}${file_name}"
+    mv "${file_name}" "${index_name}${file_name}" 2> /dev/null
     let "img_index++"
 done
 
@@ -27,12 +27,12 @@ done
 for file_name in "${file_list[@]}"
 do
     index_name="img_${img_index}.jpg"
-    mv "${file_name}" "${index_name}"
+    mv "${file_name}" "${index_name}" 2> /dev/null
     if [ $? -eq 0 ]
     then
         let "img_index++"
     fi
 done
-echo "Total: ${img_index} image files."
+echo "${img_index}"
 cd ../../..
 
