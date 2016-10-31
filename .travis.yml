@@ -10,7 +10,7 @@ branches:
 
 install:
 - ls -al
-- sh travis_env_init.sh
+- source travis_env_init.sh
 
 script:
 - hexo clean
