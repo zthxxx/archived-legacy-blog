@@ -72,6 +72,12 @@ time_format: HH:mm:ss
 per_page: 5
 pagination_dir: page
 
+# JsonContent
+jsonContent:
+  ignore:
+    - baidu_verify_56LAPIAq3C.html
+    - 404.html
+  
 # Creat sitemap
 sitemap:
   path: sitemap.xml
