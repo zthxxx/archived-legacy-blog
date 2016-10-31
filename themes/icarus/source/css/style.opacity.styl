@@ -13,7 +13,7 @@ body::after{
     padding: 0;
     height: 100%;
     width: 100%;
-    background: rgba(0,0,0,0.55);
+    background: rgba(0,0,0,0.4);
     z-index: -1;
 }
 
@@ -35,21 +35,59 @@ body::after{
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
     color: #EFEFEF;
 }
-p {
+.header-inner #logo .site-title, a.article-title:visited, .article-footer a, .article-meta a, .widget ul li a, .widget ol li a, .widget ul .category-list-child a, .widget ol .category-list-child a, #recent-post li .item-inner .item-title a, #header a, #header a:visited, .search-form-submit, .fa, .layout-wrap-inner.list-categories ul li a, .layout-wrap-inner.list-categories ul .category-list-child a, .archive-article-header a, .layout-wrap-inner.tag-cloud a, .timeline-row .content h1 a, .archive-article-header a:visited, .layout-wrap-inner.tag-cloud a:visited, .timeline-row .content h1 a:visited, .article-header .article-title, #ds-thread #ds-reset .ds-comment-body p, #recent-post li .item-inner .item-date {
+    color: #EFEFEF;
+}
+p, .article-entry ul ul, .widget ul ul, .article-entry ol ul, .widget ol ul, .article-entry ul ol, .widget ul ol, .article-entry ol ol, .widget ol ol, .article-entry ul, .widget ul, .article-entry ul, .widget ul, .article-entry ol, .widget ol, .article-entry dl, .widget dl {
     line-height: 30px;
     letter-spacing: 0.7px;
-    word-break: break-all;
     text-shadow: 0px 1px 5px #000;
 }
-.header-inner #logo .site-title, a.article-title:visited, .article-meta a, .widget ul li a, .widget ol li a, .widget ul .category-list-child a, .widget ol .category-list-child a, #recent-post li .item-inner .item-title a, #header a, #header a:visited, .search-form-submit, .fa, .layout-wrap-inner.list-categories ul li a, .layout-wrap-inner.list-categories ul .category-list-child a, .archive-article-header a, .layout-wrap-inner.tag-cloud a, .timeline-row .content h1 a, .archive-article-header a:visited, .layout-wrap-inner.tag-cloud a:visited, .timeline-row .content h1 a:visited, .article-header .article-title, #ds-thread #ds-reset .ds-comment-body p {
+.article-entry a {
+    text-shadow: 0px 1px 2px #000;
+}
+.archive-article-header a,
+.layout-wrap-inner.tag-cloud a,
+.timeline-row .content h1 a,
+.archive-article-header a:visited,
+.layout-wrap-inner.tag-cloud a:visited,
+.timeline-row .content h1 a:visited,
+.search-form-input,
+.search-form-input.ins-search-input,
+.search-form-input.st-ui-search-input,
+.search-form-input.st-default-search-input,
+#profile .inner .social-links > table td a:hover,
+.article-footer a:hover,
+.article-share-input,
+.article-nav-caption, .article-nav-title, .article-nav-link-wrap:hover,
+.archive-year-wrap .archive-year,
+.archive-category-wrap .archive-year,
+.archive-tag-wrap .archive-year,
+.layout-title .archive-year  {
+    color: #38b7ea;
+}
+#header a, #header a:hover, #recent-post li .item-inner .item-title a:hover, .widget ul .category-list-child a:hover {
+    white-space: nowrap;
+    -webkit-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    -ms-transition: 0.2s ease;
+    transition: 0.2s ease;
+    color: #38b7ea;
+}
+#recent-post li .item-inner .item-category a:hover {
+    white-space: nowrap;
+    -webkit-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    -ms-transition: 0.2s ease;
+    transition: 0.2s ease;
     color: #EFEFEF;
+}
+.widget ul:not(#recent-post) li a:hover:before, .widget ol:not(#recent-post) li a:hover:before, .widget a:hover, a.article-title:hover {
+    color: #38b7ea;
 }
 #header, #profile .inner {
     background: none;
     box-shadow: none;
-}
-a.article-title:hover {
-    color: #38b7ea;
 }
 .article-entry h1, .article-entry h2, .article-entry h3, .article-entry h4, .article-entry h5, .article-entry h6 {
     letter-spacing: 0.7px;
