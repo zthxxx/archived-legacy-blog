@@ -29,7 +29,6 @@ customize:
         github: https://github.com/zthxxx/zthxxx.github.io
         twitter: 
         facebook: 
-        dribbble: 
         rss: http://www.zthxxx.top/atom.xml
     social_link_tooltip: true # enable the social link tooltip, options: true, false
     opacity:
