@@ -40,6 +40,6 @@ background_images_count=$(sh rename_BGI.sh)
 sed -i'' "s~background_images_count: 0 ~background_images_count: ${background_images_count} ~" "${theme_config_file}"
 
 ls -al source/images/background/
-cat "theme_config_file"
+cat "${theme_config_file}"
 
 echo "Hexo environment pre install complete OK."
