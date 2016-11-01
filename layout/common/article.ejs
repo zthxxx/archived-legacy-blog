@@ -29,7 +29,23 @@
                     <%- toc(post.content) %>
                 </div>
             <% } %>
-            <%- post.content %>
+            <% if (theme.auto_excerpt.enable) { %>
+                <% var br = 0 %>
+                <% for (var bar_count = 0; bar_count < theme.auto_excerpt.lines; bar_count++) { %>
+                    <% br = post.content.indexOf('\n',br + 1) %>
+                    <% if(br < 0) { break }%>
+                <% } %>
+                <% if(br <= 0 || !index) { %>
+                    <%- post.content %>
+                <% } else { %>
+                    <p><%- post.content.substring(0, br + 1) %></p>
+                    <p class="article-more-link">
+                        <a href="<%- url_for(post.path) %>#more"><%= __('article.more') %></a>
+                    </p>
+                <% } %>
+            <% } else { %>
+                <%- post.content %>
+            <% } %>
         <% } %>
         </div>
         <footer class="article-footer">

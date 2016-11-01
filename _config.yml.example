@@ -43,6 +43,12 @@ widgets:
     - tag
     - links
 
+# Excerpt 
+## Auto creat excerpt with not <!--more-->
+auto_excerpt:
+  enable: true
+  lines: 5    
+    
 # Search
 search:
     insight: true # you need to install `hexo-generator-json-content` before using Insight Search
