@@ -38,10 +38,14 @@ body::after{
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
     color: #EFEFEF;
 }
-.header-inner #logo .site-title, a.article-title:visited, .article-footer a, .article-meta a, .widget ul li a, .widget ol li a, .widget ul .category-list-child a, .widget ol .category-list-child a, #recent-post li .item-inner .item-title a, #header a, #header a:visited, .search-form-submit, .fa, .layout-wrap-inner.list-categories ul li a, .layout-wrap-inner.list-categories ul .category-list-child a, .archive-article-header a, .archive-article-header a:visited, .layout-wrap-inner.tag-cloud a, .layout-wrap-inner.tag-cloud a:visited, .article-header .article-title, #ds-thread #ds-reset .ds-comment-body p, #recent-post li .item-inner .item-date, .category-list-count, .tag-list-count, .archive-list-count, #profile .inner .base-info #location, #search-form-wrap .search-form .search-form-submit:focus, #page-nav a {
+.header-inner #logo .site-title, .article-footer a, .article-meta a, .widget ul li a, .widget ol li a, .widget ul .category-list-child a, .widget ol .category-list-child a, #recent-post li .item-inner .item-title a, #header a, #header a:visited, .search-form-submit, .layout-wrap-inner.list-categories ul li a, .layout-wrap-inner.list-categories ul .category-list-child a, .archive-article-header a, .archive-article-header a:visited, .layout-wrap-inner.tag-cloud a, .layout-wrap-inner.tag-cloud a:visited, #ds-thread #ds-reset .ds-comment-body p, #recent-post li .item-inner .item-date, .category-list-count, .tag-list-count, .archive-list-count, #profile .inner .base-info #location, #search-form-wrap .search-form .search-form-submit:focus, #page-nav a {
     color: #EFEFEF;
 }
-#page-nav .current {color: #FFFFFF;}
+.fa {color: #DEDEDE;}
+.fa:hover, 
+#page-nav .current,
+.article-header .article-title {color: #FFFFFF;}
+
 .article-entry .caption {
     color: #DDD;
 }
@@ -61,6 +65,7 @@ p, .article-entry ul ul, .widget ul ul, .article-entry ol ul, .widget ol ul, .ar
     line-height: 30px;
     letter-spacing: 0.7px;
     text-shadow: 0px 1px 5px #000;
+    color: #FFFFFF;
 }
 .article-nav-caption, .article-nav-title, .article-entry h1, .article-entry h2, .article-entry h3, .article-entry h4, .article-entry h5, .article-entry h6,
 .layout-wrap-inner.tag-cloud a,
@@ -76,21 +81,17 @@ p, .article-entry ul ul, .widget ul ul, .article-entry ol ul, .widget ol ul, .ar
 }
 
 /* chrome diff 360se start */
-.archive-article-header a,
-.archive-article-header a:visited,
-.search-form-input,
+
+#profile .inner .social-links > table td a:hover,
 .search-form-input.ins-search-input,
 .search-form-input.st-ui-search-input,
 .search-form-input.st-default-search-input,
-#profile .inner .social-links > table td a:hover,
-.layout-wrap-inner.list-categories li a:before:hover {
-    color: #38b7ea;
-}
-.article-footer a:hover {
-    color: #38b7ea;
-}
+.archive-article-header a,
+.archive-article-header a:visited,
+.search-form-input,
+.article-footer a:hover,
 .article-share-input,
-.article-nav-caption, .article-nav-title, .article-nav-link-wrap:hover,
+.article-nav-caption,
 .archive-year-wrap .archive-year,
 .archive-category-wrap .archive-year,
 .archive-tag-wrap .archive-year,
@@ -99,7 +100,8 @@ p, .article-entry ul ul, .widget ul ul, .article-entry ol ul, .widget ol ul, .ar
 .layout-wrap-inner.list-categories ul .category-list-child a:hover { 
     color: #38b7ea;
 }
-.timeline-row .content h1 a:hover, .timeline-row .content h1 a:visited:hover { 
+a.article-title, a.article-title:visited,
+.article-nav-title, .timeline-row .content h1 a:hover, .timeline-row .content h1 a:visited:hover { 
     color: #EFEFEF;
 }
 /* chrome diff 360se code end */
@@ -130,17 +132,32 @@ p, .article-entry ul ul, .widget ul ul, .article-entry ol ul, .widget ol ul, .ar
     transition: 0.2s ease;
     color: #EFEFEF;
 }
-.widget ul:not(#recent-post) li a:hover:before, .widget ol:not(#recent-post) li a:hover:before, .widget a:hover, a.article-title:hover {
+
+a.article-title:hover, .layout-wrap-inner .list-categories li a:hover:before {
     color: #38b7ea;
+}
+.article-nav-title:hover, 
+.layout-wrap-inner.list-categories ul li a:hover,
+.widget ul:not(#recent-post) li a:hover:before, .widget ol:not(#recent-post) li a:hover:before, .widget a:hover {
+    color: #38b7ea;
+}
+.layout-wrap-inner.list-categories li a:hover:before,
+.widget ul:not(#recent-post) li a:hover:before, .widget ol:not(#recent-post) li a:hover:before {
+    color: #FFF;
 }
 
 /* Search input box style */
+.ins-section .ins-slug,
 .ins-section .ins-search-item .ins-search-preview, .article-more-link a {
     height: auto;
     color: #777;
     line-height: auto;
     letter-spacing: 0;
     text-shadow: none;
+}
+.article-more-link a {
+    background-color: #DEDEDE;
+    color: #555;
 }
 .ins-section .ins-search-item header, .fa-times-circle:before {
     color: #444;
