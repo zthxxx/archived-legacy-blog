@@ -74,26 +74,36 @@ p, .article-entry ul ul, .widget ul ul, .article-entry ol ul, .widget ol ul, .ar
 .article-entry h1, .article-entry h2, .article-entry h3, .article-entry h4, .article-entry h5, .article-entry h6 {
     letter-spacing: 0.7px;
 }
+
+/* chrome diff 360se start */
 .archive-article-header a,
-.timeline-row .content h1 a,
 .archive-article-header a:visited,
-.timeline-row .content h1 a:visited,
 .search-form-input,
 .search-form-input.ins-search-input,
 .search-form-input.st-ui-search-input,
 .search-form-input.st-default-search-input,
 #profile .inner .social-links > table td a:hover,
-.layout-wrap-inner.list-categories ul .category-list-child a:hover,
-.layout-wrap-inner.list-categories li a:before:hover,
-.article-footer a:hover,
+.layout-wrap-inner.list-categories li a:before:hover {
+    color: #38b7ea;
+}
+.article-footer a:hover {
+    color: #38b7ea;
+}
 .article-share-input,
 .article-nav-caption, .article-nav-title, .article-nav-link-wrap:hover,
 .archive-year-wrap .archive-year,
 .archive-category-wrap .archive-year,
 .archive-tag-wrap .archive-year,
-.layout-title .archive-year  {
+.layout-title .archive-year,
+.timeline-row .content h1 a, .timeline-row .content h1 a:visited,
+.layout-wrap-inner.list-categories ul .category-list-child a:hover { 
     color: #38b7ea;
 }
+.timeline-row .content h1 a:hover, .timeline-row .content h1 a:visited:hover { 
+    color: #EFEFEF;
+}
+/* chrome diff 360se code end */
+
 .article-share-twitter:before, .article-share-facebook:before, .article-share-pinterest:before, .article-share-google:before {
     color: #444;
 }
@@ -104,7 +114,7 @@ p, .article-entry ul ul, .widget ul ul, .article-entry ol ul, .widget ol ul, .ar
     border-radius: 0;
 }
 /* Article links style */
-#header a, #header a:hover, #recent-post li .item-inner .item-title a:hover, .widget ul .category-list-child a:hover {
+#header a:hover, #recent-post li .item-inner .item-title a:hover, .widget ul .category-list-child a:hover {
     white-space: nowrap;
     -webkit-transition: 0.2s ease;
     -moz-transition: 0.2s ease;
