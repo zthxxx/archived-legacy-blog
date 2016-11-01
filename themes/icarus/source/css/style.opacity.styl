@@ -35,7 +35,7 @@ body::after{
     background-color: rgba(0,0,0,0.7);
     box-shadow: 0 0 0 8px rgba(255,255,255,0.4);
 }
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
     color: #EFEFEF;
 }
 .header-inner #logo .site-title, a.article-title:visited, .article-footer a, .article-meta a, .widget ul li a, .widget ol li a, .widget ul .category-list-child a, .widget ol .category-list-child a, #recent-post li .item-inner .item-title a, #header a, #header a:visited, .search-form-submit, .fa, .layout-wrap-inner.list-categories ul li a, .layout-wrap-inner.list-categories ul .category-list-child a, .archive-article-header a, .archive-article-header a:visited, .layout-wrap-inner.tag-cloud a, .layout-wrap-inner.tag-cloud a:visited, .article-header .article-title, #ds-thread #ds-reset .ds-comment-body p, #recent-post li .item-inner .item-date, .category-list-count, .tag-list-count, .archive-list-count, #profile .inner .base-info #location, #search-form-wrap .search-form .search-form-submit:focus, #page-nav a {
@@ -96,6 +96,12 @@ p, .article-entry ul ul, .widget ul ul, .article-entry ol ul, .widget ol ul, .ar
 }
 .article-share-twitter:before, .article-share-facebook:before, .article-share-pinterest:before, .article-share-google:before {
     color: #444;
+}
+.article-entry img {
+    cursor: pointer;
+    border: 5px solid rgba(255, 255, 255, 1);
+    box-shadow: 1px 1px 5px rgba(0, 115, 102, 0.95);
+    border-radius: 0;
 }
 /* Article links style */
 #header a, #header a:hover, #recent-post li .item-inner .item-title a:hover, .widget ul .category-list-child a:hover {
