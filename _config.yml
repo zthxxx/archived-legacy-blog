@@ -88,6 +88,7 @@ tag_generator:
 jsonContent:
   ignore:
     - baidu_verify_56LAPIAq3C.html
+    - googlec3e349397eabe514.html
     - 404.html
   
 # Creat sitemap
