@@ -5,12 +5,12 @@ __COMMENTS__='
 # nodejs: 6.9.1
 # npm: 3.10.8
 # sudo: required
-# need "GIT_USER_NAME" "GIT_USER_EMAIL" "GIT_REPO_TOKEN" "BAIDU_ANALYTICS" "DuoShuo_SHORT_NAME" variable in env.
+# need "GIT_USER_NAME" "GIT_USER_EMAIL" "GIT_REPO_TOKEN" "BAIDU_ANALYTICS" "BAIDU_URL_SUBMIT_TOKEN" "DuoShuo_SHORT_NAME" variable in env.
 # env variable "icarus_opacity_disable" to control icarus opacity version display enable or disable.
 # how to use: in travis, use the script to run, eg:
+#    source travis_env_init.sh
 #    sh travis_env_init.sh
 #    ./travis_env_init.sh
-#    source travis_env_init.sh
 '
 
 
@@ -26,9 +26,12 @@ npm install > /dev/null
 
 echo "hexo and packages install complete."
 
+# Set git config 
 git config --global user.name "${GIT_USER_NAME}"
 git config --global user.email "${GIT_USER_EMAIL}"
 sed -i'' "s~git@github.com:~https://${GIT_REPO_TOKEN}@github.com/~" _config.yml
+# Set baidu initiative push config
+sed -i'' "s~token: # baidu zhanzhang initiative push token~token: ${BAIDU_URL_SUBMIT_TOKEN} ~" _config.yml
 
 theme_config_file="themes/icarus/_config.yml"
 cp "${theme_config_file}.example" "${theme_config_file}"
