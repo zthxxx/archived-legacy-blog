@@ -1,0 +1,44 @@
+---
+title: Git subtree 管理子项目包使用小结
+date: 2016-11-02 17:59:24
+banner:
+tags: [git]
+categories:
+  - 编程开发
+  - git
+---
+
+
+## Git subtree 管理子项目包使用小结
+
+### 场景描述
+
+我们在用 git 管理的一个工程中，或多或少会在我们自己的项目中 **引入一些别人写的包或者模块**。
+
+通常我们是直接下载这个包的文件放在我们的工程文件夹中直接使用的。
+
+假如我们需要使用引入某个正在开发的模块的源代码，并希望能获取这个模块在快速迭代中更新的各个版本，这时一般就是 **在项目工程中导入这个模块的 git 仓库到工程的子目录中**。
+
+现在就牵涉到 git 如何管理一个项目仓库中还有其他子模块项目 git 仓库的情况。
+
+这方面 git 提供的工具是 submodule 和 subtree，
+
+本篇讲的是使用 **subtree** 管理子项目的一些使用小结。虽然git 官方推荐是用 subtree 不用 submodule，但是我觉得这两者是各有利弊，各有各的使用场合，在不同的需求条件下都可能切换使用到。
+
+
+
+### 参考资料
+
+这里先给出我当时学习的几篇相关的博文：
+
+[使用GIT SUBTREE集成项目到子目录 - XA](http://aoxuis.me/post/2013-08-06-git-subtree)
+
+[用 Git Subtree 在多个 Git 项目间双向同步子项目 - 敲代码的小德子](https://segmentfault.com/a/1190000003969060)
+
+[如何科学的管理多个子项目 - 阿驴](https://segmentfault.com/a/1190000006080556)
+
+[使用 git-subtree 以子目录形式引入外部项目 - William Sang](http://www.tuicool.com/articles/veaEBr)
+
+
+
+------  未完暂存 。。。。
