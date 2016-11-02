@@ -9,4 +9,4 @@ Disallow: /vendor/
 Disallow: /content.json
 Disallow: /404.html
 
-Sitemap: http://www.zthxxx.top/baidusitemap.xml
+Sitemap: http://blog.zthxxx.top/baidusitemap.xml
