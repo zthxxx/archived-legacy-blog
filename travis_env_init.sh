@@ -52,6 +52,4 @@ then
     fi
 fi
 
-cat "${theme_config_file}"
-
 echo "Hexo environment pre install complete OK."

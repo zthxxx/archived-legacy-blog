@@ -9,15 +9,14 @@ branches:
   - writing
 
 install:
-- ls -al
-- source travis_env_init.sh
+  - source travis_env_init.sh
 
 script:
-- hexo clean
-- hexo generate
+  - hexo clean
+  - hexo generate
 
 after_success:
-- hexo deploy
+  - hexo deploy
 
 notifications:
-    email: true
+  email: true
