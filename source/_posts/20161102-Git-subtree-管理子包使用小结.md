@@ -152,8 +152,8 @@ blog/themes/icarus/
    假如现在主项目和子项目都提交好了，工作空间是干净的，这时我们把主题 icarus 的子项目当前版本切出到新分支作为起点：
 
    ```bash
-   git subtree split --rejoin --prefix=<本地子项目目录> --brach <主项目中作为放置子项目的分支名>
-   git subtree split --rejoin --prefix=themes/icarus --brach icarus
+   git subtree split --rejoin --prefix=<本地子项目目录> --branch <主项目中作为放置子项目的分支名>
+   git subtree split --rejoin --prefix=themes/icarus --branch icarus
    ```
 
    现在我的主项目里就多了一个叫 icarus 的分支，存放的就是 icarus 这个子项目的内容，这个分支只是作起点储存用的，**不用管它不用修改不用推送到远程库**。
@@ -174,7 +174,7 @@ blog/themes/icarus/
    当现在 commit 又变多了遍历时间又慢了，需要更新推进那个起始点的时候，只需要再在当前版本上再切出一个作起点的分支覆盖原来那个就是，命令和第一次切出分支作起点时一模一样。
 
    ```bash
-   git subtree split --rejoin --prefix=themes/icarus --brach icarus
+   git subtree split --rejoin --prefix=themes/icarus --branch icarus
    ```
 
    这样下次推送子项目时开始遍历时的起点也更新了。
