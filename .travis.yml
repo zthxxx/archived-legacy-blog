@@ -16,7 +16,7 @@ script:
   - hexo generate
 
 after_success:
-  - hexo deploy
+  - hexo deploy > /dev/null
 
 notifications:
   email: true
