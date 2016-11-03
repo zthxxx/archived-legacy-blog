@@ -38,7 +38,7 @@ body::after{
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
     color: #EFEFEF;
 }
-.header-inner #logo .site-title, .article-footer a, .article-meta a, .widget ul li a, .widget ol li a, .widget ul .category-list-child a, .widget ol .category-list-child a, #recent-post li .item-inner .item-title a, #header a, #header a:visited, .search-form-submit, .layout-wrap-inner.list-categories ul li a, .layout-wrap-inner.list-categories ul .category-list-child a, .archive-article-header a, .archive-article-header a:visited, .layout-wrap-inner.tag-cloud a, .layout-wrap-inner.tag-cloud a:visited, #ds-thread #ds-reset .ds-comment-body p, #recent-post li .item-inner .item-date, .category-list-count, .tag-list-count, .archive-list-count, #profile .inner .base-info #location, #search-form-wrap .search-form .search-form-submit:focus, #page-nav a {
+.header-inner #logo .site-title, .article-footer a, .article-meta a, .widget ul li a, .widget ol li a, .widget ul .category-list-child a, .widget ol .category-list-child a, #header a, #header a:visited, .search-form-submit, .layout-wrap-inner.list-categories ul li a, .layout-wrap-inner.list-categories ul .category-list-child a, .archive-article-header a, .archive-article-header a:visited, .layout-wrap-inner.tag-cloud a, .layout-wrap-inner.tag-cloud a:visited, #ds-thread #ds-reset .ds-comment-body p, #recent-post li .item-inner .item-date, .category-list-count, .tag-list-count, .archive-list-count, #profile .inner .base-info #location, #search-form-wrap .search-form .search-form-submit:focus, #page-nav a {
     color: #EFEFEF;
 }
 .fa {color: #DEDEDE;}
@@ -96,7 +96,9 @@ table {
     border: solid#FFF 2px;
     padding: 10px;
 }
-
+.toc-article {
+    background-color: rgba(0,0,0,0.4);
+}
 /* chrome diff 360se start */
 #profile .inner .social-links > table td a:hover,
 .search-form-input.ins-search-input,
@@ -135,6 +137,10 @@ a.article-title, a.article-title:visited,
     border-radius: 0;
 }
 /* Article links style */
+#recent-post li .item-inner .item-title a {
+    white-space: nowrap;
+    color: #EFEFEF;
+}
 #header a:hover, #recent-post li .item-inner .item-title a:hover, .widget ul .category-list-child a:hover {
     white-space: nowrap;
     -webkit-transition: 0.2s ease;
@@ -152,7 +158,9 @@ a.article-title, a.article-title:visited,
     color: #EFEFEF;
 }
 
-a.article-title:hover, .layout-wrap-inner .list-categories li a:hover:before {
+a.article-title:hover, 
+.layout-wrap-inner .list-categories li a:hover:before,
+#recent-post li:hover .item-title a {
     color: #38b7ea;
 }
 .article-nav-title:hover, 
