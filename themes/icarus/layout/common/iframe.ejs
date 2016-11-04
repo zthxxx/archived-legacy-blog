@@ -1,5 +1,6 @@
 <% if (!index) { %>
     <script type="text/javascript">
+        $("#profile").remove();
         $(function(){
             $("#profile").remove();
             $("#sidebar").remove();
@@ -21,7 +22,6 @@ iframe#embed_iframe {
 </style>
 <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope>
     <div class="article-inner">
-        <iframe id="embed_iframe" src="./embed_page/">
-        </iframe>
+        <iframe id="embed_iframe" src="<%= post.iframe_url ? post.iframe_url : './embed_page/' %>""></iframe>
     </div>
 </article>
