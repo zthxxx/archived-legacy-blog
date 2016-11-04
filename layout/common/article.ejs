@@ -17,9 +17,10 @@
         <% } %>
         <%- partial('post/gallery') %>
         <div class="article-entry" itemprop="articleBody">
-        <% var show_excerpt = true %>
+        <% var show_all_content = true %>
         <% if (index) { %>
             <% if (post.excerpt) { %>
+                <% show_all_content = false %>
                 <p><%- post.excerpt %></p>
             <% } else if (theme.auto_excerpt.enable) { %>
                 <% var br_position = 0 %>
@@ -28,15 +29,11 @@
                     <% if(br_position < 0) { break } %>
                 <% } %>
                 <% if(br_position > 0) { %>
+                    <% show_all_content = false %>
                     <p><%- post.content.substring(0, br_position + 1) %><p>
-                <% } else { %>
-                    <% show_excerpt = false %>
                 <% } %>
-            <% } else { %>
-                <% show_excerpt = false %>
             <% } %>
         <% } else { %>
-            <% show_excerpt = false %>
             <% if (post.toc) { %>
                 <div id="toc" class="toc-article">
                 <strong class="toc-title"><%= __('article.catalogue') %></strong>
@@ -44,13 +41,13 @@
                 </div>
             <% } %>
         <% } %>
-        <% if (show_excerpt) { %>
+        <% if (show_all_content) { %>
+            <%- post.content %>
+            </div>
+        <% } else { %>
             </div>   
             <div class="article-more-link">
                 <a href="<%- url_for(post.path) %>#more"><%= __('article.more') %></a>
-            </div>
-        <% } else { %>
-            <%- post.content %>
             </div>
         <% } %>
         <footer class="article-footer">

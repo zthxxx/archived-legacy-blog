@@ -39,16 +39,16 @@ customize:
 widgets:
     - recent_posts
     - category
-    - archive
     - tag
     - links
 
 # Excerpt 
 ## Auto creat excerpt with not <!--more-->
+## Enable will truncate auto_excerpt.lines rows in post head to replace excerpt.
 auto_excerpt:
-  enable: true
-  lines: 5    
-    
+    enable: true
+    lines: 5
+
 # Search
 search:
     insight: true # you need to install `hexo-generator-json-content` before using Insight Search
