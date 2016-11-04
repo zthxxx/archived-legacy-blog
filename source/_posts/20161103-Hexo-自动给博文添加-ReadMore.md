@@ -49,7 +49,7 @@ categories:
 
 打开 `article.ejs`，找到与摘要相关的代码：
 
-```javascript
+```html
 <div class="article-entry" itemprop="articleBody">
 <% if (index && post.excerpt) { %>
     <p><%- post.excerpt %></p>
@@ -153,7 +153,7 @@ else:
 
    然后再用 string.substring(start, end) 方法，截取到获取的位置。
 
-   ```javascript
+   ```html
    <% var br_position = 0 %>
    <% for (var br_count = 0; br_count < theme.auto_excerpt.lines; br_count++) { %>
        <% br_position = post.content.indexOf('\n',br_position + 1) %>

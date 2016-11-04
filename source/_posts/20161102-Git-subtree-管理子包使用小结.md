@@ -4,7 +4,6 @@ date: 2016-11-02 17:59:24
 banner:
 tags:
   - git
-  - subtree
 categories:
   - 编程开发
   - git
