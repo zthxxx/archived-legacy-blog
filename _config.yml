@@ -27,7 +27,7 @@ code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
   - README.md
-  - '_posts/**/embed_page/**'
+  - '_posts/*/embed_page/**'
 
 # Writing
 new_post_name: :year:month:day-:title.md # File name of new posts
