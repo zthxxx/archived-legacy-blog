@@ -1,5 +1,7 @@
 #!/bin/bash
-cd ./source/images/background
+run_path=$(pwd)
+img_folder_path="$1"
+cd "${img_folder_path}"
 
 img_index=0
 file_list=()
@@ -34,5 +36,4 @@ do
     fi
 done
 echo "${img_index}"
-cd ../../..
-
+cd "${run_path}"

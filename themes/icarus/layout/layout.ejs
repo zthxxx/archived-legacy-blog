@@ -1,12 +1,17 @@
 <%- partial('common/head') %>
 <body>
     <% if (theme.customize.opacity.enable) { %>
-        <% if (theme.customize.opacity.background_images_count) { %>
-            <script type="text/javascript">
-                var background_image_index = ~~(Math.random() * <%- theme.customize.opacity.background_images_count %>);
-                document.body.style.backgroundImage="url(/images/background/img_"+background_image_index+".jpg)";
-            </script>
-        <% } %>
+        <script type="text/javascript">
+            var horizontal_img_count = <%- theme.customize.opacity.background_images_count.horizontal_img_count %>;
+            var vertical_img_count = <%- theme.customize.opacity.background_images_count.vertical_img_count %>;
+            if (window.innerWidth > window.innerHeight) {
+                var background_image_index = ~~(Math.random() * horizontal_img_count);
+                document.body.style.backgroundImage="url(/images/background/horizontal/img_"+background_image_index+".jpg)";
+            } else {
+                var background_image_index = ~~(Math.random() * vertical_img_count);
+                document.body.style.backgroundImage="url(/images/background/vertical/img_"+background_image_index+".jpg)";
+            }
+        </script>
     <% } %>
     <div id="container">
         <%- partial('common/header') %>

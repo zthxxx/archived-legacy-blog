@@ -33,8 +33,10 @@ customize:
     social_link_tooltip: true # enable the social link tooltip, options: true, false
     opacity:
         enable: false # Is choose the opacity version of this theme
-        background_images_count: 0 # Set opacity version theme background images max number.(/images/background/img_*.jpg)
-    
+        background_images_count: # Set opacity version theme background images max number.(/images/background/)
+            horizontal_img_count: 0 
+            vertical_img_count: 0 
+
 # Widgets
 widgets:
     - recent_posts
