@@ -2,15 +2,49 @@
 <body>
     <% if (theme.customize.opacity.enable) { %>
         <script type="text/javascript">
-            var horizontal_img_count = <%- theme.customize.opacity.background_images_count.horizontal_img_count %>;
-            var vertical_img_count = <%- theme.customize.opacity.background_images_count.vertical_img_count %>;
-            if (window.innerWidth > window.innerHeight) {
-                var background_image_index = ~~(Math.random() * horizontal_img_count);
-                document.body.style.backgroundImage="url(/images/background/horizontal/img_"+background_image_index+".jpg)";
-            } else {
-                var background_image_index = ~~(Math.random() * vertical_img_count);
-                document.body.style.backgroundImage="url(/images/background/vertical/img_"+background_image_index+".jpg)";
+            function getUrlParam(paramName) {
+                paramValue = "", isFound = !1;
+                if (this.location.search.indexOf("?") == 0 && this.location.search.indexOf("=") > 1) {
+                    arrSource = unescape(this.location.search).substring(1, this.location.search.length).split("&"), i = 0;
+                    while (i < arrSource.length && !isFound) arrSource[i].indexOf("=") > 0 && arrSource[i].split("=")[0].toLowerCase() == paramName.toLowerCase() && (paramValue = arrSource[i].split("=")[1], isFound = !0), i++
+                }
+                return paramValue == "" && (paramValue = null), paramValue
             }
+            function setRandomBackImg() {
+                var horizontal_img_count = <%- theme.customize.opacity.background_images_count.horizontal_img_count %>;
+                var vertical_img_count = <%- theme.customize.opacity.background_images_count.vertical_img_count %>;
+                if (window.innerWidth > window.innerHeight) {
+                    var background_image_index = ~~(Math.random() * horizontal_img_count);
+                    document.body.style.backgroundImage = "url(/images/background/horizontal/img_"+background_image_index+".jpg)";
+                } else {
+                    var background_image_index = ~~(Math.random() * vertical_img_count);
+                    document.body.style.backgroundImage = "url(/images/background/vertical/img_"+background_image_index+".jpg)";
+                }
+            }
+            function setIcarusOpacityStyle(enable) {
+                if (enable == "false") {
+                    document.body.style.backgroundImage = "none";
+                    $('link[rel="stylesheet"][href$="/css/style-opacity.css"]').remove();
+                } else {
+                    setRandomBackImg();
+                    $("head").append("<link>").children(":last").attr({rel: "stylesheet", type: "text/css", href: "/css/style-opacity.css"});
+                }
+            }
+            function reverseIcarusOpacity() {
+                if ($.cookie("icarus_opacity") == "false") {
+                    $.cookie("icarus_opacity", "true", 365);
+                    setIcarusOpacityStyle("true");
+                } else {
+                    $.cookie("icarus_opacity", "false", 365);
+                    setIcarusOpacityStyle("false");
+                }
+            }
+            if (getUrlParam("icarus_opacity") == "false") {
+                $.cookie("icarus_opacity", "false", 365);
+            } else {
+                $.cookie("icarus_opacity", "true", 365);
+            }
+            setIcarusOpacityStyle($.cookie("icarus_opacity"));
         </script>
     <% } %>
     <div id="container">
