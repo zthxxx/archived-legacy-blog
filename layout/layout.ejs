@@ -32,17 +32,17 @@
             }
             function reverseIcarusOpacity() {
                 if ($.cookie("icarus_opacity") == "false") {
-                    $.cookie("icarus_opacity", "true", 365);
+                    $.cookie("icarus_opacity", "true", { expires: 365, path: '/' });
                     setIcarusOpacityStyle("true");
                 } else {
-                    $.cookie("icarus_opacity", "false", 365);
+                    $.cookie("icarus_opacity", "false", { expires: 365, path: '/' });
                     setIcarusOpacityStyle("false");
                 }
             }
             if (getUrlParam("icarus_opacity") == "false") {
-                $.cookie("icarus_opacity", "false", 365);
+                $.cookie("icarus_opacity", "false", { expires: 365, path: '/' });
             } else {
-                $.cookie("icarus_opacity", "true", 365);
+                $.cookie("icarus_opacity", "true", { expires: 365, path: '/' });
             }
             setIcarusOpacityStyle($.cookie("icarus_opacity"));
         </script>
