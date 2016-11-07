@@ -41,7 +41,7 @@
             }
             if (getUrlParam("icarus_opacity") == "false") {
                 $.cookie("icarus_opacity", "false", { expires: 365, path: '/' });
-            } else {
+            } else (getUrlParam("icarus_opacity") == "true") {
                 $.cookie("icarus_opacity", "true", { expires: 365, path: '/' });
             }
             setIcarusOpacityStyle($.cookie("icarus_opacity"));
