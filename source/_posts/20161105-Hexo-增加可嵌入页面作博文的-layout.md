@@ -33,7 +33,7 @@ post_asset_folder: true
 ```yaml
 # /_config.yml
 skip_render:
-  - '_posts/**/embed_page/**'
+  - '_posts/*/embed_page/**'
 ```
 
 在博客更目录下的 `scaffolds/` 目录下，新建一个模板文件 `embed.md`：

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Greedy Snake - Hightopo</title>
+        <meta charset="UTF-8">
+        <style>
+            html,body {
+                padding:0;
+                margin:0;
+            }
+            .main {
+                width: 100%;
+                height: 100%;
+                display: block;
+                background:black;
+            }
+        </style>
+        <script src="./js/hightopo/ht.js"></script>
+        <script src="./js/hightopo/ht-shortening-replace.js"></script>
+        <script>
+        var gridPerSize, rowColCount, borderSite, food;
+        // 单个格子大小， 格子行列数， 边界位置， 食物
+        var dataModel, graph3dView;
+        // 数据模型， 三维视窗
+        var snake = [], score = 0, direction = 'up', isRunning = true;
+        // 蛇数组， 得分， 进行方向， 是否运行
+        function init() {
+                gridPerSize = 40;
+                rowColCount = 30;
+                borderSite = gridPerSize * rowColCount / 2;
+                food = null;
+                dataModel = new ht.DataModel();
+                graph3dView = new ht.graph3d.Graph3dView(dataModel);
+                graph3dView.setGridVisible(true);
+                graph3dView.setGridColor('#29B098');
+                graph3dView.setGridSize(rowColCount);
+                graph3dView.setGridGap(gridPerSize);
+                graph3dView.setCenterAxisVisible(true);
+                var view = graph3dView.getView();
+                view.className = 'main';
+                document.body.appendChild(view);
+                window.addEventListener('resize',function(e){graph3dView.invalidate();},false);//自动调整大小
+                graph3dView.getSelectionModel().setSelectionMode('none');
+                view.addEventListener(ht.Default.isTouchable ? 'touchstart': 'click',
+	                function(e) {
+	                    if (isRunning) {
+	                        var click_position = graph3dView.getHitPosition(e);//p: [x, z, y]
+	                        console.log(click_position);
+	                        if (Math.abs(click_position[0]) < borderSite && Math.abs(click_position[2]) < borderSite) {
+	                            if (direction === 'up' || direction === 'down') {
+	                                direction = click_position[0] > snake[0].getPosition3d()[0] ? 'right': 'left';
+	                            } else if (direction === 'left' || direction === 'right') {
+	                                direction = click_position[2] > snake[0].getPosition3d()[2] ? 'down': 'up';
+	                            }
+	                        }
+	                    } else if (ht.Default.isDoubleClick(e)) {
+	                        start();
+	                    }
+	                },
+                	false
+                );
+                start();
+                setInterval(function() {if (isRunning) {isRunning = runNext();}},200);
+            }
+            function start() {
+                dataModel.clear();
+                snake = [];
+                score = 0;
+                direction = 'up';
+                isRunning = true;
+                var shape = new ht.Shape();
+                shape.setPoints(new ht.List([
+                    {x: -borderSite, y: -borderSite},
+                    {x: borderSite, y: -borderSite},
+                    {x: borderSite, y: borderSite},
+                    {x: -borderSite, y: borderSite},
+                    {x: -borderSite, y: -borderSite},
+                ]));// 边墙起始点
+                shape.setThickness(4);	//厚度
+                shape.setTall(gridPerSize); //高度
+                shape.setElevation(gridPerSize / 2);//上升高度
+                shape.setStyles({
+                    'all.color': 'rgba(20, 120, 120, 0.5)',
+                    'all.transparent': true,
+                    'all.reverse.cull': true
+                });
+                dataModel.add(shape);
+                for (var i = 0; i < rowColCount / 2; i++) {
+                    snake.push(createNode(rowColCount / 2 + i, rowColCount / 2));
+                }
+                createFood();
+            }
+            function createNode(x, y) {
+                var node = new ht.Node();
+                node.setAttrs({
+                    x: x,
+                    y: y
+                });
+                node.setSize3d(gridPerSize * 0.9, gridPerSize * 0.9, gridPerSize * 0.9);//长宽高大小
+                node.setPosition3d( - borderSite + gridPerSize * x + gridPerSize / 2, gridPerSize / 2, - borderSite + gridPerSize * y + gridPerSize / 2);// [x, z, y] + [偏移]
+                dataModel.add(node);
+                return node;
+            }
+            function getRandom() {
+                return parseInt(Math.random() * rowColCount);//返回在一边宽度内的随机数
+            }
+            function createFood() {
+                var x = getRandom(), y = getRandom();
+                while (touchFood(x, y) || touchSnake(x, y)) {
+                    x = getRandom();
+                    y = getRandom();
+                }
+                if (food) dataModel.remove(food);
+                food = createNode(x, y);
+                food.setStyles({
+                    'shape3d': 'sphere',
+                    'shape3d.color': 'rgba(255, 0, 0, 0.9)',
+                    'shape3d.transparent': true,
+                    'shape3d.reverse.cull': true
+                });
+            }
+            function touchSnake(x, y) {
+                for (var i = 0; i < snake.length; i++) {
+                    if (snake[i].getAttr('x') === x && snake[i].getAttr('y') === y) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            function touchFood(x, y) {
+                return food && food.getAttr('x') === x && food.getAttr('y') === y;
+            }
+            function runNext() {
+                var node = snake[0],
+                x = node.getAttr('x'),
+                y = node.getAttr('y');
+                switch(direction)
+                {
+                	case 'up':
+                		y--;
+                		break;
+                	case 'down':
+                		y++;
+                		break;
+                	case 'left':
+                		x--;
+                		break;
+                	case 'right':
+                		x++;
+                		break;                	
+                }
+                if (x < 0 || x >= rowColCount || y < 0 || y >= rowColCount || touchSnake(x, y)) {
+                    return false;
+                }
+                if (touchFood(x, y)) {
+                    score++;
+                    snake.splice(0, 0, createNode(x, y));
+                    createFood();
+                } else {
+                    snake.splice(0, 0, createNode(x, y));
+                    dataModel.remove(snake.pop());
+                }
+                return true;
+            }
+        </script>
+    </head>
+    
+    <body onload="init();">
+    </body>
+
+</html>
