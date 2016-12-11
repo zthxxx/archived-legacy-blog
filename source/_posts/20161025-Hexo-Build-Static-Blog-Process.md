@@ -1,5 +1,5 @@
 ---
-title: Hexo 建立静态博客过程
+title: 使用 Hexo 生成静态博客过程记录
 date: 2016-10-25 09:45:35
 tags: [Hexo, 博客]
 categories:
@@ -8,8 +8,6 @@ categories:
   - Hexo
 ---
 
-
-## 使用 Hexo 生成静态博客过程记录
 
 最近刚用 Hexo 和 GitHub 搭好了一个[个人博客](https://zthxxx.github.io)，现在准备记录下这个过程。这个搭建的过程应该分为两部分，一是学会使用 Hexo 生成静态博客页面，二是申请 GitHub Pages 托管网站，本篇文章是讲的第一步。
 

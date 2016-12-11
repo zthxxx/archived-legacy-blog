@@ -209,7 +209,7 @@ a.article-title:hover,
 
 /* This is duoshuo css, need setting in duoshuo background manager. */
 #ds-reset .ds-avatar {background:none !important; box-shadow:none !important;}
-#ds-reset .ds-avatar img {box-shadow: none;-webkit-border-radius: 500px;-moz-border-radius: 500px;border-radius: 500px;}
+#ds-reset .ds-avatar img {box-shadow: none;-webkit-border-radius: 500px !important;-moz-border-radius: 500px;border-radius: 500px !important;}
 #ds-reset .ds-avatar img , #ds-thread #ds-reset ul.ds-children .ds-avatar img{width:50px !important;height: 50px !important;-webkit-transition: .8s;-moz-transition: .8s;-o-transition: .8s;-ms-transition: .8s;padding:3px;border: 1px solid #ddd;background: none;}
 .ds-post:hover .ds-avatar img{transform:rotate(720deg);-webkit-transform:rotate(720deg);-moz-transform:rotate(720deg);-o-transform:rotate(720deg);-ms-transform:rotate(720deg);border-radius:30px !important;}
 #ds-reset .ds-avatar img:hover{transform:rotate(720deg);-webkit-transform:rotate(720deg);-moz-transform:rotate(720deg);-o-transform:rotate(720deg);-ms-transform:rotate(720deg);border-radius:30px !important;}
@@ -217,13 +217,23 @@ a.article-title:hover,
 #ds-thread #ds-reset .ds-comment-body, #ds-thread #ds-reset ul.ds-children .ds-comment-body{padding-left:70px !important;}
 #ds-thread #ds-reset ul.ds-children .ds-avatar{width:50px !important;}
 #ds-thread #ds-reset .ds-replybox{padding: 0 0 0 80px !important;}
-#ds-thread #ds-reset #ds-bubble {background-color: rgba(0, 0, 0, 0.7)}
+#ds-thread #ds-reset #ds-bubble {background-color: rgba(0, 0, 0, 0.7) !important;}
 #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-body{margin-left: 68px !important;}
 #ds-recent-comments li.ds-comment:nth-of-type(1){border:none !important;}
-#ds-thread #ds-reset .ds-time, #ds-thread #ds-reset .ds-comment-actions a {color: #DDD;}
-#ds-thread #ds-reset li.ds-tab a.ds-current, #ds-reset .ds-highlight, #ds-thread #ds-reset li.ds-post-placeholder, #ds-thread #ds-reset .ds-textarea-wrapper textarea:focus, #ds-thread #ds-reset a, #ds-thread #ds-reset .ds-account-control span, #ds-thread #ds-reset .ds-sort a, #ds-thread #ds-reset .ds-sort a, #ds-thread #ds-reset .ds-comment-body p {
+#ds-thread #ds-reset .ds-time, #ds-thread #ds-reset .ds-comment-actions a {color: #DDD !important;}
+#ds-thread #ds-reset li.ds-tab a.ds-current, #ds-thread #ds-reset li.ds-post-placeholder, #ds-thread #ds-reset .ds-textarea-wrapper textarea:focus, #ds-thread #ds-reset a, #ds-thread #ds-reset .ds-account-control span, #ds-thread #ds-reset .ds-sort a, #ds-thread #ds-reset .ds-sort a, #ds-thread #ds-reset .ds-comment-body p {
     color: #EFEFEF !important;
     text-shadow: none !important;
+}
+#ds-thread #ds-reset a.ds-like-thread-button span, #ds-thread #ds-reset .ds-user-name {
+    color: #EFEFEF !important;
+}
+#ds-thread #ds-reset a.ds-like-thread-button {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    background-image: none !important;
+}
+#ds-thread #ds-reset .ds-sort a.ds-current:active {
+    color: #017cb9 !important;
 }
 #ds-thread #ds-reset .ds-account-control ul li a {
     color: #777 !important;
@@ -236,4 +246,4 @@ a.article-title:hover,
     transition: 0.2s ease;
     color: #38b7ea;
 }
-
+.ds-sync{display:none !important;}

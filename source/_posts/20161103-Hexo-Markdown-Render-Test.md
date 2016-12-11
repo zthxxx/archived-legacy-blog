@@ -9,7 +9,6 @@ categories:
   - Hexo
 ---
 
-## Hexo markdown 渲染测试
 
 Hexo 使用 [marked](https://github.com/hexojs/hexo-renderer-marked) 作为默认的 markdown 渲染器，由于我所使用的主题被我自己修改过一些样式，因此需要测试一下对 markdown 各个标记文本的渲染是否出了偏差。
 
