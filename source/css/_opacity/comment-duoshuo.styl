@@ -1,0 +1,106 @@
+$comments-avatar-size := 50px
+#comments
+    color: $-main-word-color
+    background: shadow-mask(0.3)
+    box-shadow: 0 0 0 8px light-mask(0.4)
+    #ds-thread #ds-reset
+        .ds-highlight
+            color: #38b7ea !important
+        .ds-avatar
+            background: none
+            box-shadow: none
+            img
+                width: $comments-avatar-size
+                height: $comments-avatar-size
+                padding:3px
+                border: 1px solid #ddd
+                box-shadow: none
+                border-radius(50%)
+                background: none
+                transition(0.8s)
+                &:hover
+                    transform(rotate(720deg))
+        .ds-meta
+            a.ds-like-thread-button
+                background-color: shadow-mask(0.2)
+                background-image: none
+                span
+                    color: $-main-word-color
+                    text-shadow: none
+        .ds-comments-info
+            .ds-comments-tabs .ds-tab a
+                color: $-main-word-color
+                text-shadow: none
+            .ds-sort
+                a
+                    color: $-main-word-color
+                    &.ds-current,
+                    &:active,
+                    &:hover
+                        color: $-main-word-light-color
+                        font-weight: bold
+        .ds-comments
+            .ds-post-placeholder
+                color: $-main-word-color
+            .ds-post
+                .ds-post-self
+                    .ds-avatar
+                        @extends #comments #ds-thread #ds-reset .ds-avatar
+                    &:hover .ds-avatar img
+                        transform(rotate(720deg))
+                    .ds-comment-body
+                        padding-left: $comments-avatar-size + 20px
+                        p
+                            color: $-main-word-color
+                        span.ds-user-name
+                            color: $-main-word-light-gray-color
+                        .ds-comment-footer
+                            a,
+                            span
+                                color: light-mask(0.75)
+                            a:hover
+                                color: $-main-word-light-color
+        .ds-toolbar
+            .ds-visitor a,
+            .ds-account-control span
+                color: light-mask(0.75)
+                &:hover
+                    color: $-main-word-light-color
+        .ds-replybox
+            padding: 0 0 0 $comments-avatar-size + 30px
+            .ds-textarea-wrapper
+                textarea
+                    color: $-main-word-color
+                textarea:focus
+                    color: $-main-word-light-color
+        .ds-powered-by a:hover
+            color: $-main-word-color
+        .ds-like-tooltip
+            color: $-main-word-color
+            text-shadow: none
+            background: shadow-mask(0.8)
+            a
+                color: $-main-word-light-gray-color
+                text-shadow: none
+                &:hover
+                    color: $-main-word-light-color
+        .ds-service-list a.ds-service-link
+            color: $-main-word-light-gray-color
+            &:hover
+                color: $-main-word-light-color
+        #ds-bubble
+            background: shadow-mask(0.8)
+            .ds-bubble-content#ds-user-card
+                a.ds-user-name
+                    color: $-main-word-color !important
+                    &:hover
+                        color: $-link-word-color !important
+                .ds-user-card-meta a
+                    color: $-main-word-light-gray-color
+                    &:hover
+                        color: $-main-word-light-color
+                .ds-avatar img
+                    width: $comments-avatar-size
+                    height: $comments-avatar-size
+                    
+
