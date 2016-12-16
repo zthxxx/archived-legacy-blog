@@ -152,7 +152,7 @@ else:
 
    然后再用 string.substring(start, end) 方法，截取到获取的位置。
 
-   ```html
+   ```javascript
    <% var br_position = 0 %>
    <% for (var br_count = 0; br_count < theme.auto_excerpt.lines; br_count++) { %>
        <% br_position = post.content.indexOf('\n',br_position + 1) %>

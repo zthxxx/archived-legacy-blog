@@ -1,249 +1,48 @@
-body{
-    zoom: 1;
-    background-size: cover;
-    background-attachment: fixed;
-}
-body::after{
-    content: "";
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(0,0,0,0.4);
-    z-index: -1;
-}
-#header, #profile .inner {
-    background: none;
-    box-shadow: none;
-}
-#profile .inner .base-info #avatar {
-    box-shadow: 0 0 0 8px rgba(255,255,255,0.4);
-    -webkit-border-radius: 500px;
-    -moz-border-radius: 500px;
-    border-radius: 500px;
-}
-#profile .inner .base-info #avatar:hover {
-    box-shadow: 0 0 0 5px rgba(255,255,255,0.3);
-    transition: box-shadow linear 0.2s;
-}
-.timeline-row .content {background-color: rgba(0,0,0,0.5);}
-#profile.card {
-    background-color: rgba(0,0,0,0.7);
-    box-shadow: 0 0 0 8px rgba(255,255,255,0.4);
-}
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
-    color: #EFEFEF;
-}
-.header-inner #logo .site-title, .article-footer a, .article-meta a, .widget ul li a, .widget ol li a, .widget ul .category-list-child a, .widget ol .category-list-child a, #header a, #header a:visited, .search-form-submit, .layout-wrap-inner.list-categories ul li a, .layout-wrap-inner.list-categories ul .category-list-child a, .archive-article-header a, .archive-article-header a:visited, .layout-wrap-inner.tag-cloud a, .layout-wrap-inner.tag-cloud a:visited, #ds-thread #ds-reset .ds-comment-body p, #recent-post li .item-inner .item-date, .category-list-count, .tag-list-count, .archive-list-count, #profile .inner .base-info #location, #search-form-wrap .search-form .search-form-submit:focus, #page-nav a {
-    color: #EFEFEF;
-}
-.fa {color: #DEDEDE;}
-.fa:hover, 
-#page-nav .current,
-.article-header .article-title {color: #FFFFFF;}
+@import "nib"
+shadow-mask(alpha = 0.4)
+    rgba(0, 0, 0, alpha)
 
-.article-entry .caption {
-    color: #DDD;
-}
-/* Article content style*/
-.article-inner, #comments, .archive-article {
-    background: rgba(255,255,255,0.15);
-    box-shadow: 0 0 0 8px rgba(255,255,255,0.4);
-    color: #FAFAFA;
-}
-.article-inner, #comments {
-    background: rgba(0,0,0,0.3);
-}
-.article-entry blockquote {
-    margin: 0;
-    background: rgba(255,255,255,0.15);
-    border-left: 6px solid #eee;
-}
-p, .article-entry ul ul, .widget ul ul, .article-entry ol ul, .widget ol ul, .article-entry ul ol, .widget ul ol, .article-entry ol ol, .widget ol ol, .article-entry ul, .widget ul, .article-entry ul, .widget ul, .article-entry ol, .widget ol, .article-entry dl, .widget dl {
-    line-height: 30px;
-    letter-spacing: 0.7px;
-    text-shadow: 0px 1px 5px #000;
-    color: #FFFFFF;
-}
-.article-nav-caption, .article-nav-title, .article-entry h1, .article-entry h2, .article-entry h3, .article-entry h4, .article-entry h5, .article-entry h6,
-.layout-wrap-inner.tag-cloud a,
-.layout-wrap-inner.tag-cloud a:visited,
-.layout-wrap-inner.list-categories ul li a, .layout-wrap-inner.list-categories ul .category-list-child a {
-    text-shadow: 0px 1px 3px #000;
-}
-.article-entry a {
-    text-shadow: 0px 1px 2px #000;
-}
-.article-entry h1, .article-entry h2, .article-entry h3, .article-entry h4, .article-entry h5, .article-entry h6 {
-    letter-spacing: 0.7px;
-}
-div .article-more-link {
-     padding: 0 0 20px 20px;
-}
-code {
-    color: #FFF;
-    background-color: #555;
-}
-a code {
-    color: #97F0F9;
-}
-table {
-    border-collapse: collapse;
-    border: none;
-}
-.article-entry th, .article-entry td {
-    border: solid#FFF 2px;
-    padding: 10px;
-}
-.toc-article {
-    background-color: rgba(0,0,0,0.4);
-}
+light-mask(alpha = 0.4)
+    rgba(255, 255, 255, alpha)
 
-.article-share-twitter:before, .article-share-facebook:before, .article-share-pinterest:before, .article-share-google:before {
-    color: #888;
-}
-.article-share-twitter:hover:before, .article-share-facebook:hover:before, .article-share-pinterest:hover:before, .article-share-google:hover:before {
-    color: #EEE;
-}
-.article-banner {
-    box-shadow: 0 5px 6px #000;
-}
-.article-entry img {
-    cursor: pointer;
-    border: 5px solid rgba(255, 255, 255, 0.9);
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.95);
-    border-radius: 0;
-}
-@media screen and (max-width: 559px) {
-  .outer {
-    padding: 0 10px;
-  }
-}
-/* chrome diff 360se start */
-#profile .inner .social-links > table td a:hover,
-.search-form-input.ins-search-input,
-.search-form-input.st-ui-search-input,
-.search-form-input.st-default-search-input,
-.archive-article-header a,
-.archive-article-header a:visited,
-.search-form-input,
-.article-footer a:hover,
-.article-share-input,
-.article-nav-caption,
-.archive-year-wrap .archive-year,
-.archive-category-wrap .archive-year,
-.archive-tag-wrap .archive-year,
-.layout-title .archive-year,
-.timeline-row .content h1 a, .timeline-row .content h1 a:visited,
-.layout-wrap-inner.list-categories ul .category-list-child a:hover { 
-    color: #38b7ea;
-}
-a.article-title, a.article-title:visited,
-.article-nav-title, .timeline-row .content h1 a:hover, .timeline-row .content h1 a:visited:hover { 
-    color: #EFEFEF;
-}
-/* chrome diff 360se code end */
+$-main-word-light-gray-color = #ddd
+$-main-word-color = #efefef
+$-main-word-light-color = #fff
+$-link-word-color = #38b7ea
+$-link-word-bule-light-color = #66E3FF
+$-link-word-cyan-color = #97f9f9
 
-/* Article links style */
-#recent-post li .item-inner .item-title a {
-    white-space: nowrap;
-    color: #EFEFEF;
-}
-#header a:hover, #recent-post li .item-inner .item-title a:hover, .widget ul .category-list-child a:hover {
-    white-space: nowrap;
-    -webkit-transition: 0.2s ease;
-    -moz-transition: 0.2s ease;
-    -ms-transition: 0.2s ease;
-    transition: 0.2s ease;
-    color: #38b7ea;
-}
-#recent-post li .item-inner .item-category a:hover {
-    white-space: nowrap;
-    -webkit-transition: 0.2s ease;
-    -moz-transition: 0.2s ease;
-    -ms-transition: 0.2s ease;
-    transition: 0.2s ease;
-    color: #EFEFEF;
-}
+transform()
+    -webkit-transform: arguments
+    -moz-transform: arguments
+    -ms-transform: arguments
+    -o-transform: arguments
+    transform: arguments
 
-a.article-title:hover, 
-.layout-wrap-inner .list-categories li a:hover:before,
-#recent-post li:hover .item-title a {
-    color: #38b7ea;
-}
-.article-nav-title:hover, 
-.layout-wrap-inner.list-categories ul li a:hover,
-.widget ul:not(#recent-post) li a:hover:before, .widget ol:not(#recent-post) li a:hover:before, .widget a:hover {
-    color: #38b7ea;
-}
-.layout-wrap-inner.list-categories li a:hover:before,
-.widget ul:not(#recent-post) li a:hover:before, .widget ol:not(#recent-post) li a:hover:before {
-    color: #FFF;
-}
+transition()
+    -webkit-transition: arguments
+    -moz-transition: arguments
+    -ms-transition: arguments
+    -o-transition: arguments
+    transition: arguments
 
-/* Search input box style */
-.ins-section .ins-slug,
-.ins-section .ins-search-item .ins-search-preview, .article-more-link a {
-    height: auto;
-    color: #777;
-    line-height: auto;
-    letter-spacing: 0;
-    text-shadow: none;
-}
-.article-more-link a {
-    background-color: #DEDEDE;
-    color: #555;
-}
-.ins-section .ins-search-item header, .fa-times-circle:before {
-    color: #444;
-    text-shadow: 0px 1px 1px #777;
-}
-#search-form-wrap .search-form .search-form-input::-webkit-input-placeholder {color: #EFEFEF} 
-#search-form-wrap .search-form .search-form-input::-moz-placeholder {color: #EFEFEF} 
-#search-form-wrap .search-form .search-form-input::-moz-placeholder {color: #EFEFEF} 
-#search-form-wrap .search-form .search-form-input::-ms-input-placeholder {color: #EFEFEF} 
+border-radius()
+    -webkit-border-radius: arguments
+    -moz-border-radius: arguments
+    border-radius: arguments
 
-/* This is duoshuo css, need setting in duoshuo background manager. */
-#ds-reset .ds-avatar {background:none !important; box-shadow:none !important;}
-#ds-reset .ds-avatar img {box-shadow: none;-webkit-border-radius: 500px !important;-moz-border-radius: 500px;border-radius: 500px !important;}
-#ds-reset .ds-avatar img , #ds-thread #ds-reset ul.ds-children .ds-avatar img{width:50px !important;height: 50px !important;-webkit-transition: .8s;-moz-transition: .8s;-o-transition: .8s;-ms-transition: .8s;padding:3px;border: 1px solid #ddd;background: none;}
-.ds-post:hover .ds-avatar img{transform:rotate(720deg);-webkit-transform:rotate(720deg);-moz-transform:rotate(720deg);-o-transform:rotate(720deg);-ms-transform:rotate(720deg);border-radius:30px !important;}
-#ds-reset .ds-avatar img:hover{transform:rotate(720deg);-webkit-transform:rotate(720deg);-moz-transform:rotate(720deg);-o-transform:rotate(720deg);-ms-transform:rotate(720deg);border-radius:30px !important;}
-#ds-thread #ds-reset .ds-comment-body, #ds-thread #ds-reset ul.ds-children .ds-comment-body{padding-left:70px !important;}
-#ds-thread #ds-reset .ds-comment-body, #ds-thread #ds-reset ul.ds-children .ds-comment-body{padding-left:70px !important;}
-#ds-thread #ds-reset ul.ds-children .ds-avatar{width:50px !important;}
-#ds-thread #ds-reset .ds-replybox{padding: 0 0 0 80px !important;}
-#ds-thread #ds-reset #ds-bubble {background-color: rgba(0, 0, 0, 0.7) !important;}
-#ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-body{margin-left: 68px !important;}
-#ds-recent-comments li.ds-comment:nth-of-type(1){border:none !important;}
-#ds-thread #ds-reset .ds-time, #ds-thread #ds-reset .ds-comment-actions a {color: #DDD !important;}
-#ds-thread #ds-reset li.ds-tab a.ds-current, #ds-thread #ds-reset li.ds-post-placeholder, #ds-thread #ds-reset .ds-textarea-wrapper textarea:focus, #ds-thread #ds-reset a, #ds-thread #ds-reset .ds-account-control span, #ds-thread #ds-reset .ds-sort a, #ds-thread #ds-reset .ds-sort a, #ds-thread #ds-reset .ds-comment-body p {
-    color: #EFEFEF !important;
-    text-shadow: none !important;
-}
-#ds-thread #ds-reset a.ds-like-thread-button span, #ds-thread #ds-reset .ds-user-name {
-    color: #EFEFEF !important;
-}
-#ds-thread #ds-reset a.ds-like-thread-button {
-    background-color: rgba(0, 0, 0, 0.1) !important;
-    background-image: none !important;
-}
-#ds-thread #ds-reset .ds-sort a.ds-current:active {
-    color: #017cb9 !important;
-}
-#ds-thread #ds-reset .ds-account-control ul li a {
-    color: #777 !important;
-}
-#ds-thread #ds-reset .ds-sort a:hover {
-    white-space: nowrap;
-    -webkit-transition: 0.2s ease;
-    -moz-transition: 0.2s ease;
-    -ms-transition: 0.2s ease;
-    transition: 0.2s ease;
-    color: #38b7ea;
-}
-.ds-sync{display:none !important;}
+link-blue-trans()
+    transition(0.2s ease)
+    color: $-link-word-color
+
+
+@import "_opacity/body"
+@import "_opacity/header"
+@import "_opacity/profile"
+@import "_opacity/article"
+@import "_opacity/sidebar"
+@import "_opacity/timeline"
+@import "_opacity/archive"
+@import "_opacity/insight"
+@import "_opacity/comments"
+

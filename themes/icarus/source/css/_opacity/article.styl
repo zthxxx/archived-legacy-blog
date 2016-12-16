@@ -1,0 +1,86 @@
+.article-inner
+    background: shadow-mask(0.4)
+    box-shadow: 0 0 0 8px light-mask()
+    color: $-main-word-color
+
+.article-banner
+    box-shadow: 0 5px 6px #000
+
+.article-header
+    .article-title,
+    .article-title:visited
+        color: $-main-word-color
+    a.article-title:hover
+        link-blue-trans()
+    .article-meta a
+        color: $-main-word-color
+        &:hover
+            link-blue-trans()
+
+.article-entry
+    p, ul ul, ol ul, ul ol, ol ol, ul, ul, ol, dl
+        line-height: 30px
+        letter-spacing: 0.7px
+        text-shadow: 0px 1px 5px #000
+        color: $-main-word-light-color
+    h1, h2, h3, h4, h5, h6
+        text-shadow: 0px 1px 3px #000
+        letter-spacing: 0.7px
+    th, td
+        border: solid#FFF 2px
+        padding: 10px;
+    img
+        cursor: pointer
+        border-radius: 2px
+        border: 5px solid light-mask(0.9)
+        box-shadow: 2px 2px 6px shadow-mask(0.95)
+    a 
+        text-shadow: 0px 1px 2px #000
+        code
+            color: $-link-word-cyan-color
+    blockquote
+        margin: 0
+        background: light-mask(0.15)
+        border-left: 6px solid $-main-word-light-gray-color
+    code
+        color: #fff
+        background-color: #555
+    .caption
+        color: $-main-word-light-gray-color
+    .toc-article
+        background-color: shadow-mask(0.4)
+
+table 
+    border-collapse: collapse
+    border: none
+  
+.article-more-link a
+    background-color: $-main-word-light-gray-color
+    color: #555
+        
+.article-footer
+    a
+        color: $-main-word-color
+        &:hover,
+        &:hover .fa
+            link-blue-trans()
+
+.article-share-links
+    .fa
+        color: #888
+        &:hover
+            color: $-main-word-color
+
+.article-nav-caption
+    color: $-main-word-color
+    text-shadow: 0px 1px 3px #000
+
+.article-nav-title
+    @extend .article-nav-caption
+    &:hover
+        link-blue-trans()
+        text-decoration: underline
+        
+#article-nav:before
+    background: $-main-word-color
+
