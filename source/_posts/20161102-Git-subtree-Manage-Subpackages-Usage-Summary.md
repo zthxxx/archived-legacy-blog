@@ -3,10 +3,10 @@ title: Git subtree 管理子项目包使用小结
 date: 2016-11-02 17:59:24
 banner:
 tags:
-  - git
+  - Git
 categories:
   - 编程开发
-  - git
+  - Git
 ---
 
 

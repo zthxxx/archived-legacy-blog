@@ -19,6 +19,23 @@
         }
     %>
     <title><% if (title) { %><%= title %> | <% } %><%= config.title %></title>
+    <% 
+       var keywords_content = undefined;
+       if (page.keywords) { 
+           keywords_content = page.keywords;
+       } else if (page.tags && page.tags.length) {
+           keywords_content = page.tags.toArray().map(tag => tag.name).join(",");
+       } else if (config.keywords) {
+           keywords_content = config.keywords;
+       } else if (page.title) {
+           keywords_content = page.title;
+       } else if (config.title) {
+           keywords_content = config.title;
+       }
+    %>
+    <% if (keywords_content) { %>
+        <meta name="keywords" content="<%= keywords_content %>" />
+    <% } %>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <%- open_graph({
         image:          thumbnail(page),

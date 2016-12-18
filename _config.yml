@@ -85,14 +85,16 @@ tag_generator:
   per_page: 10
 
 
-# JsonContent
+# Extensions
+## Plugins: https://hexo.io/plugins/
+### JsonContent
 jsonContent:
   ignore:
     - baidu_verify_56LAPIAq3C.html
     - googlec3e349397eabe514.html
     - 404.html
   
-# Creat sitemap
+### Creat sitemap
 sitemap:
   path: sitemap.xml
 baidusitemap:
@@ -103,9 +105,14 @@ baidu_url_submit:
   host: blog.zthxxx.top # Your host site address which need registe in baidu zhanzhang
   path: site_recent_urls.txt # File name in local with record recent url of blog
   token: # baidu zhanzhang initiative push token
-  
-# Extensions
-## Plugins: https://hexo.io/plugins/
+
+### Adds nofollow attribute to all external links in your hexo blog posts automatically.
+nofollow:
+  enable: true
+  exclude:
+    - zthxxx.top
+    - blog.zthxxx.top
+
 ## Themes: https://hexo.io/themes/
 theme: icarus
 

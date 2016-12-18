@@ -1,12 +1,14 @@
 User-agent: *
 Allow: /
+Allow: /tags
 Allow: /archives/
+Allow: /categories/
 Allow: /about/
-Disallow: /vendors/
 Disallow: /js/
 Disallow: /css/
-Disallow: /vendor/
+Disallow: /libs/
+Disallow: /fonts/
 Disallow: /content.json
 Disallow: /404.html
-
+Sitemap: http://blog.zthxxx.top/sitemap.xml
 Sitemap: http://blog.zthxxx.top/baidusitemap.xml

@@ -4,9 +4,14 @@
     a,
     a:visited,
     .search-form-submit,
-    .search-form-input,
-    .search-form-input::-webkit-input-placeholder
+    .search-form-input
         color: $-main-word-color
+    .search-form-input
+        &::-webkit-input-placeholder
+        &:-moz-placeholder
+        &::-moz-placeholder
+        &:-ms-input-placeholder
+            color: $-main-word-color
     a:hover
         link-blue-trans()
     #search-form-wrap .search-form .search-form-submit:hover
