@@ -35,6 +35,15 @@ link-blue-trans()
     transition(0.2s ease)
     color: $-link-word-color
 
+selection_clean()
+    selection_style()
+        color: #fff
+        background: #338fff
+        text-shadow: none
+    &::selection
+        selection_style()
+    &::-moz-selection
+        selection_style()
 
 @import "_opacity/body"
 @import "_opacity/header"

@@ -2,13 +2,16 @@
     li
         .item-inner
             .item-category a
-                text-shadow: 1px 1px 1px #000;
+                text-shadow: 1px 1px 1px #000
                 &:hover
                     color: $-main-word-color
             .item-title a,
             .item-date
                 color: $-main-word-color
-                text-shadow: 0px 1px 5px #000;
+                text-shadow: 0px 1px 5px #000
+                &,
+                & time
+                    selection_clean()
         &:hover .item-title a
             link-blue-trans()
 
@@ -17,7 +20,8 @@
 .widget ul .category-list-child a,
 .widget ol .category-list-child a
     color: $-main-word-color
-    text-shadow: 0px 1px 5px #000;
+    text-shadow: 0px 1px 5px #000
+    selection_clean()
     &:hover
         link-blue-trans()
 
