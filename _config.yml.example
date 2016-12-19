@@ -43,7 +43,7 @@ customize:
 widgets:
     - recent_posts
     - category
-    - tag
+    - tagcloud
     - links
 
 # Excerpt 
@@ -84,6 +84,6 @@ miscellaneous:
         twitter_id:
         google_plus:
     links:
-        Hexo: http://hexo.io
-        saber酱的抱枕: http://www.saber.我爱你/website
-        Manjusak: http://manjusaka.itscoder.com/
+        saber酱的抱枕 (Hentai RBQ): http://www.saber.我爱你/website
+        Manjusak (写代码的香港记者): http://manjusaka.itscoder.com/
+        JAMES-PAN (自称小鶸的蒟苣): https://blog.jamespan.me/
