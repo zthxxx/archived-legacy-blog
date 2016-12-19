@@ -6,7 +6,6 @@ tags: [WNCG, 学习规划]
 categories: 
 - WNCG
 - 学习规划
-- 第二次培训
 ---
 
 

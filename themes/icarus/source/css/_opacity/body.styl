@@ -22,11 +22,22 @@ body
         width: 100%
         background: shadow-mask()
         z-index: -100
-        
+
+::-webkit-scrollbar
+    width: 13px
+    height: 13px
+::-webkit-scrollbar-track-piece
+    background-color: #222
+::-webkit-scrollbar-thumb
+    background: #666
+    
 @media screen and (max-width: 559px)
     .outer
-        padding: 0 10px;
-
+        padding: 0 10px
+    ::-webkit-scrollbar
+        width: 10px
+        height: 10px
+        
 .fa 
     color: $-main-word-light-gray-color
     &:hover

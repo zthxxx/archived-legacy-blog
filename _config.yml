@@ -5,7 +5,7 @@
 # Site
 title: zthxxx`s Blog
 subtitle: Life is short, you need python.
-description: This is TianMao`s blog.
+description: 面向Google和StackOverflow编程的蒟蒻coder，各方面都是辣鸡，但是觉得好玩就不会放弃，能和各位蒟苣dalao生活在同一个时代真是了不起。写页面向来无视浏览器兼容性，有各种写出失败且不可调试代码的丰富经历。轻微强迫症患者，重度ACG病患。
 author: Tian
 language: en
 timezone: Asia/Shanghai
@@ -14,7 +14,7 @@ timezone: Asia/Shanghai
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://blog.zthxxx.top
 root: /
-permalink: posts/:year:month/:title/
+permalink: posts/:title/
 permalink_defaults:
 
 # Directory
@@ -77,7 +77,7 @@ index_generator:
   per_page: 5
 
 archive_generator:
-  per_page: 20
+  per_page: infinity
   yearly: true
   monthly: true
 
