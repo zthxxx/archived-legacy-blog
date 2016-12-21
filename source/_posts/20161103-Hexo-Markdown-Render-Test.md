@@ -1,7 +1,7 @@
 ---
 title: Hexo markdown 渲染测试
 date: 2016-11-03 16:31:08
-banner:
+banner: /images/markdown.jpg
 tags: [Hexo, Markdown]
 categories:
   - 编程开发

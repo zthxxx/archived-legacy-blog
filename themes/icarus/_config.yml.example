@@ -18,7 +18,7 @@ customize:
         enabled: true # Whether to show profile bar
         avatar: # css/images/avatar.png
         gravatar: zth_9451@qq.com # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
-        author: Tian
+        author: zthxxx
         author_title: Designer & Programmer
         location: Chengdu, China
         follow: https://github.com/zthxxx/
@@ -28,8 +28,8 @@ customize:
     favicon: /favicon.ico # path to favicon
     social_links:
         github: https://github.com/zthxxx/zthxxx.github.io
-        weibo: http://weibo.com
-        stack-overflow: https://stackoverflow.com
+        stack-overflow: http://stackoverflow.com/users/7277090/zthxxx?tab=profile
+        codepen: http://codepen.io/zthxxx/
         rss: /atom.xml
     social_link_tooltip: true # enable the social link tooltip, options: true, false
     opacity:

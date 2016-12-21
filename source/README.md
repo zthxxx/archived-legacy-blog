@@ -1,10 +1,11 @@
-# TianMao` blog~
-[![Build Status](https://api.travis-ci.org/zthxxx/zthxxx.github.io.png?branch=master)](https://travis-ci.org/zthxxx/zthxxx.github.io)
+# TianMao's blog~
 
-Welcome to this blog, I`m TianMao, a cat in the college.
+[![Build Status](https://api.travis-ci.org/zthxxx/zthxxx.github.io.png?branch=writing)](https://travis-ci.org/zthxxx/zthxxx.github.io)
 
-This is TianMao`s blogs to record of life. You are welcome to contact me!
+Welcome to this blog, I'm TianMao, a cat in the college.
 
-[blog.zthxxx.top](blog.zthxxx.top)  
+This is TianMao's blogs to record of life. You are welcome to contact me!
+
+[blog.zthxxx.top](http://blog.zthxxx.top)
 
 Follow me from [**GitHub**](https://github.com/zthxxx).
