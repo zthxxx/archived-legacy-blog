@@ -21,7 +21,7 @@
         <% if (index) { %>
             <% if (post.excerpt || post.description) { %>
                 <% show_all_content = false %>
-                <p><%- post.excerptt || post.description %></p>
+                <p><%- post.excerpt || post.description %></p>
             <% } else if (theme.auto_excerpt.enable) { %>
                 <% var br_position = 0 %>
                 <% for (var br_count = 0; br_count < theme.auto_excerpt.lines; br_count++) { %>
