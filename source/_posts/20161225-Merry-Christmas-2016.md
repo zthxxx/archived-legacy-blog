@@ -7,7 +7,7 @@ categories:
   - Life
 ---
 
-哦嗨哟~ 米娜桑~~  Merry Christmas !!!
+哦哈哟~ 米娜桑~~  Merry Christmas !!!
 
 话说今天的本站的页面也有给主题改版呢，圣诞专用哦~
 
