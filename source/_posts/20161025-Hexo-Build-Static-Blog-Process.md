@@ -128,7 +128,7 @@ Hexo 的配置文件分两部分，**站点配置** 和 **主题配置**。站�
 
 部署的过程涉及到 GitHub Pages 的申请等过程，因此会另起一张，这里只先讲部署中需要涉及到的 Hexo 站点配置文件部分。
 
-在站点配置文件中  deploy 标签下，添加对 git 的支持，选择仓库和分支，这里注意的是，hexo 3.0 之后的 deploy: type 应该是 git 而不是 github，
+在站点配置文件中  deploy 标签下，添加对 git 的支持，选择仓库和分支，这里注意的是，hexo 3.0 之后的 `deploy: type:` 应该是 git 而不是 github，并且需安装 `hexo-deployer-git` 插件。
 
 ```yaml
 # hexo _config.yml
