@@ -89,6 +89,25 @@ tag_generator:
 ## Plugins: https://hexo.io/plugins/
 ### JsonContent
 jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: true
+    tags: true
+    categories: true
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    keywords: false
+
   ignore:
     - baidu_verify_56LAPIAq3C.html
     - googlec3e349397eabe514.html

@@ -11,7 +11,7 @@ categories:
 
 额，本篇文章是[这篇博文](http://blog.zthxxx.top/posts/Hexo-Build-Static-Blog-Process/)的后续，当时本来打算写完上篇就挨着写的，结果嘛。。。跳票了一个多月~~今天还是捡回来重新把他写完。
 
-上次讲了第一步是用 Hexo 生成静态博客，第二步是部署到 GiHub Pages；但是有觉得部署 GitHub Pages 比较简单，感觉过程能讲地方的不是很多，于是这次再加一点内容，加上 Travis-CI 做持续集成（雾）。
+上次讲了第一步是用 Hexo 生成静态博客，第二步是部署到 GiHub Pages；但是有觉得部署 GitHub Pages 比较简单，感觉过程能讲地方的不是很多，于是这次再加一点内容，加上 Travis-CI 做持续集成。
 
 嘛，第一步还是照惯例先来说说第一个 GitHub Pages 吧~
 
