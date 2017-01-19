@@ -90,7 +90,6 @@ tag_generator:
 ### JsonContent
 jsonContent:
   meta: false
-  pages: false
   posts:
     title: true
     date: true
