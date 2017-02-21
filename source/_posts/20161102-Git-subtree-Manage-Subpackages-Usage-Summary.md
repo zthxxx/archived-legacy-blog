@@ -153,6 +153,19 @@ blog/themes/icarus/
 
    现在我的主项目里就多了一个叫 icarus 的分支，存放的就是 icarus 这个子项目的内容，这个分支只是作起点储存用的，**不用管它不用修改不用推送到远程库**。
 
+   如果在切出起点时出错，提示 `fatal: refusing to merge unrelated histories` ，可以试试把 `--rejoin` 参数换成 `--ignore-joins`：
+
+   ```bash
+   # 普通情况
+   # --rejoin         merge the new branch back into HEAD
+   git subtree split --rejoin --prefix=themes/icarus --branch icarus
+   # 出错提示 fatal: refusing to merge unrelated histories
+   # --ignore-joins   ignore prior --rejoin commits
+   git subtree split --ignore-joins --prefix=themes/icarus --branch icarus
+   ```
+
+   ​
+
    现在再有子项目的文件修改后，一样还是用第 3、4 点的操作更新提交和推送远程库，
 
    ```bash

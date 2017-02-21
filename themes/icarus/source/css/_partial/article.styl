@@ -63,9 +63,20 @@
         margin: line-height 0
     h1, h2, h3, h4, h5, h6
         font-weight: bold
-    h1, h2, h3, h4, h5, h6
         line-height: line-height-title
         margin: line-height-title 0
+        .headerlink
+            &::before
+                content: "#"
+                visibility: hidden
+            float: left
+            margin-left: -20px
+            line-height: 1
+        &:hover .headerlink
+            text-decoration: none
+            &::before
+                visibility: visible
+            
     a
         color: color-link
         text-decoration: none

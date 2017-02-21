@@ -1,8 +1,6 @@
 <%- partial('common/head') %>
 <body>
-    <% if (theme.customize.opacity.enable) { %>
-        <%- partial('common/opacity_style') %>
-    <% } %>
+    <%- partial(`schemes/${theme.scheme.style}_style`) %>
     <div id="container">
         <%- partial('common/header') %>
         <div class="outer">
