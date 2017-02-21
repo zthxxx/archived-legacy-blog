@@ -9,9 +9,9 @@
         return paramValue;
     }
     function setRandomBackImg() {
-        var img_path = "<%- theme.customize.opacity.background_images_path %>";
-        var horizontal_img_count = <%- theme.customize.opacity.background_images_count.horizontal_img_count %>;
-        var vertical_img_count = <%- theme.customize.opacity.background_images_count.vertical_img_count %>;
+        var img_path = "<%- theme.scheme.melan.background_images_path %>";
+        var horizontal_img_count = <%- theme.scheme.melan.background_images_count.horizontal_img_count %>;
+        var vertical_img_count = <%- theme.scheme.melan.background_images_count.vertical_img_count %>;
         if (window.innerWidth > window.innerHeight) {
             var background_image_index = ~~(Math.random() * horizontal_img_count);
             img_path += "horizontal/";
@@ -22,37 +22,37 @@
             document.body.style.backgroundImage = "url(" + img_path + "img_" + background_image_index + ".jpg)";
         }
     }
-    function setIcarusOpacityStyle(enable) {
-        if (enable == "true") {
+    function setMelanStyle(enable) {
+        if (enable) {
             setRandomBackImg();
-            $("head").append("<link>").children(":last").attr({rel: "stylesheet", type: "text/css", href: "/css/style-opacity.css"});
+            $("head").append("<link>").children(":last").attr({rel: "stylesheet", type: "text/css", href: "/css/style-melan.css"});
         } else {
             document.body.style.backgroundImage = "none";
-            $('link[rel="stylesheet"][href$="/css/style-opacity.css"]').remove();
+            $('link[rel="stylesheet"][href$="/css/style-melan.css"]').remove();
         }
     }
     function setStyleReverseTag() {
-        $("a[href='javascript:reverseIcarusOpacity();']").each(
+        $("a[href='javascript:reverseSchemes();']").each(
             function() {
-                this.text = $.cookie("icarus_opacity") == "true" ? "表世界" : "里世界" ;
+                this.text = $.cookie("scheme") == "melan" ? "表世界" : "里世界" ;
             }
         );
     }
-    function reverseIcarusOpacity() {
-        if ($.cookie("icarus_opacity") == "false") {
-            $.cookie("icarus_opacity", "true", { expires: 365, path: '/' });
-            setIcarusOpacityStyle("true");
+    function reverseSchemes() {
+        if ($.cookie("scheme") == "icarus") {
+            $.cookie("scheme", "melan", { expires: 365, path: '/' });
+            setMelanStyle(true);
         } else {
-            $.cookie("icarus_opacity", "false", { expires: 365, path: '/' });
-            setIcarusOpacityStyle("false");
+            $.cookie("scheme", "icarus", { expires: 365, path: '/' });
+            setMelanStyle(false);
         }
         setStyleReverseTag();
     }
-    if (getUrlParam("icarus_opacity") == "false") {
-        $.cookie("icarus_opacity", "false", { expires: 365, path: '/' });
-    } else if (getUrlParam("icarus_opacity") == "true") {
-        $.cookie("icarus_opacity", "true", { expires: 365, path: '/' });
+    if (getUrlParam("scheme") == "icarus") {
+        $.cookie("scheme", "icarus", { expires: 365, path: '/' });
+    } else if (getUrlParam("scheme") == "melan") {
+        $.cookie("scheme", "melan", { expires: 365, path: '/' });
     }
-    setIcarusOpacityStyle($.cookie("icarus_opacity"));
+    setMelanStyle($.cookie("scheme") == "melan");
     $(setStyleReverseTag);
 </script>

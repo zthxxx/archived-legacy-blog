@@ -5,7 +5,7 @@ menu:
   分类: /categories
   标签: /tags
   关于: /about
-  里世界: javascript:reverseIcarusOpacity();
+  里世界: javascript:reverseSchemes();
 
 # Customize
 customize:
@@ -32,10 +32,14 @@ customize:
         codepen: http://codepen.io/zthxxx/
         rss: /atom.xml
     social_link_tooltip: true # enable the social link tooltip, options: true, false
-    opacity:
-        enable: false # Is choose the opacity version of this theme
+
+# Scheme
+scheme:
+    style: melan # icarus, melan
+    icarus: 
+    melan:
         background_images_path: /images/background/
-        background_images_count: # Set opacity version theme background images max number.
+        background_images_count: # Set melan scheme background images max number.
             horizontal_img_count: 0 
             vertical_img_count: 0 
 
