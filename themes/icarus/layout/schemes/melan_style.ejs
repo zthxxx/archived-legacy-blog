@@ -39,7 +39,7 @@
         );
     }
     function reverseSchemes() {
-        if ($.cookie("scheme") == "icarus") {
+        if ($.cookie("scheme") != "melan") {
             $.cookie("scheme", "melan", { expires: 365, path: '/' });
             setMelanStyle(true);
         } else {
