@@ -16,9 +16,9 @@ Hexo 使用 [marked](https://github.com/hexojs/hexo-renderer-marked) 作为默�
 
 已知问题：
 
-- 不支持 [TOC]
-- 不支持复选框（待办事项） - [ x ]
-- 不支持 LaTex 公式
+- ~~不支持 [TOC]~~（Hexo 对文章 yaml 中 toc 项可开启支持目录）
+- ~~不支持复选框（待办事项） - [ x ]~~（已由[前端 Hack](https://github.com/zthxxx/hexo-theme-icarus/commit/d9cc7a5d9ca9711f3ecc8872a19fb5b20705f2aa) 支持）
+- ~~不支持 LaTex 公式~~（已由 hexo-renderer-mathjax 插件支持）
 - 不支持流程图、时序图、甘特图等
 
 
