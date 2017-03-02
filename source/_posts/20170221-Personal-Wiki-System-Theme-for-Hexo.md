@@ -13,7 +13,7 @@ categories:
 
 一直希望寻找一种相对优雅、我比较喜欢的方式来做**知识管理**，经过**手写笔记本、OneNote、Evernote、为知笔记**等之后，选择用 **个人 Wiki 系统** 来做自己的知识管理。但是天下 Wiki 千千万，到底选哪一种呢？
 
-我试了时下好几个流行的、推荐的比较多的 Wiki 系统，但是多少都有些小细节让我不是很满意。在我的 [Wiki 首页](http://wiki.zthxxx.top/wiki/index/) 可以看到我对知识管理和这几个 Wiki 系统的一些简单的看法，以及为此自己开坑了个 Wiki 的[轮子](https://github.com/zthxxx/hexo-theme-Wikitten)。
+我试了时下好几个流行的、推荐的比较多的 Wiki 系统，但是多少都有些小细节让我不是很满意。在我的 [Wiki 首页](http://wiki.zthxxx.me/wiki/index/) 可以看到我对知识管理和这几个 Wiki 系统的一些简单的看法，以及为此自己开坑了个 Wiki 的[轮子](https://github.com/zthxxx/hexo-theme-Wikitten)。
 
 ## 轮子
 
@@ -35,7 +35,7 @@ categories:
 
 先放上两个链接：
 
-**我的个人 Wiki 地址：[http://wiki.zthxxx.top/](http://wiki.zthxxx.top/)**
+**我的个人 Wiki 地址：[http://wiki.zthxxx.me/](http://wiki.zthxxx.me/)**
 
 **Wikitten 主题地址：[https://github.com/zthxxx/hexo-theme-Wikitten](https://github.com/zthxxx/hexo-theme-Wikitten)**
 

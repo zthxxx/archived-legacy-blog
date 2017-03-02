@@ -42,7 +42,7 @@ categories:
 
 ### 实际问题
 
-最近使用 hexo 搭建了我的[个人博客](blog.zthxxx.top)，其中 hexo 工程是 clone 的 hexo github 仓库的，主题是 pull 的 [icarus 仓库](https://github.com/ppoffice/hexo-theme-icarus) 的 [修改版](https://github.com/zthxxx/hexo-theme-icarus)。所以主题就是一个放在 hexo 工程目录里的 git 子项目。由于在搭建博客的过程中，我需要按照我想要的样式不断的修改主题，所以要求主题的子项目要能快速更新仓库，方便推送和拉取远程仓库，要能将主项目的版本与子项目版本对应，如 clone 主项目，应能同时自动 clone 子项目下来，如 reset 主项目，要能自动同时 reset 子项目到主项目版本所对应的子项目版本。
+最近使用 hexo 搭建了我的[个人博客](blog.zthxxx.me)，其中 hexo 工程是 clone 的 hexo github 仓库的，主题是 pull 的 [icarus 仓库](https://github.com/ppoffice/hexo-theme-icarus) 的 [修改版](https://github.com/zthxxx/hexo-theme-icarus)。所以主题就是一个放在 hexo 工程目录里的 git 子项目。由于在搭建博客的过程中，我需要按照我想要的样式不断的修改主题，所以要求主题的子项目要能快速更新仓库，方便推送和拉取远程仓库，要能将主项目的版本与子项目版本对应，如 clone 主项目，应能同时自动 clone 子项目下来，如 reset 主项目，要能自动同时 reset 子项目到主项目版本所对应的子项目版本。
 
 上面说的有点饶，总结来说就四点：
 

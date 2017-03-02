@@ -12,7 +12,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://blog.zthxxx.top
+url: http://blog.zthxxx.me
 root: /
 permalink: posts/:title/
 permalink_defaults:
@@ -120,7 +120,7 @@ baidusitemap:
 
 baidu_url_submit:
   count: 5 # Count for urls submit to baidu zhanzhang
-  host: blog.zthxxx.top # Your host site address which need registe in baidu zhanzhang
+  host: blog.zthxxx.me # Your host site address which need registe in baidu zhanzhang
   path: site_recent_urls.txt # File name in local with record recent url of blog
   token: # baidu zhanzhang initiative push token
 
@@ -128,8 +128,8 @@ baidu_url_submit:
 nofollow:
   enable: true
   exclude:
-    - zthxxx.top
-    - blog.zthxxx.top
+    - zthxxx.me
+    - blog.zthxxx.me
 
 ## Themes: https://hexo.io/themes/
 theme: icarus
