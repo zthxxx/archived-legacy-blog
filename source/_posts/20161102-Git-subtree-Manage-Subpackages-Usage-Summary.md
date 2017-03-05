@@ -147,22 +147,13 @@ blog/themes/icarus/
    假如现在主项目和子项目都提交好了，工作空间是干净的，这时我们把主题 icarus 的子项目当前版本切出到新分支作为起点：
 
    ```bash
-   git subtree split --rejoin --prefix=<本地子项目目录> --branch <主项目中作为放置子项目的分支名>
-   git subtree split --rejoin --prefix=themes/icarus --branch icarus
+   git subtree split [--rejoin] --prefix=<本地子项目目录> --branch <主项目中作为放置子项目的分支名>
+   git subtree split [--rejoin] --prefix=themes/icarus --branch icarus
    ```
+
+   **注意：**如果 `push` 时使用了 `--squash` 参数合并提交，那么 `split` 时**不能**使用 `--rejoin` 参数，反之必须使用。
 
    现在我的主项目里就多了一个叫 icarus 的分支，存放的就是 icarus 这个子项目的内容，这个分支只是作起点储存用的，**不用管它不用修改不用推送到远程库**。
-
-   如果在切出起点时出错，提示 `fatal: refusing to merge unrelated histories` ，可以试试把 `--rejoin` 参数换成 `--ignore-joins`：
-
-   ```bash
-   # 普通情况
-   # --rejoin         merge the new branch back into HEAD
-   git subtree split --rejoin --prefix=themes/icarus --branch icarus
-   # 出错提示 fatal: refusing to merge unrelated histories
-   # --ignore-joins   ignore prior --rejoin commits
-   git subtree split --ignore-joins --prefix=themes/icarus --branch icarus
-   ```
 
    ​
 
@@ -197,7 +188,7 @@ blog/themes/icarus/
 
 但是 submodule 可以进去到子项目的仓库单独查看子项目的修改记录，在子项目目录时，就相当与在一个单独的仓库内，对外层主项目完全不可见。
 
-**subtree** 好在使用方便，一共就两三个命令，参数还是都一样的，使用起来很简单。缺点就是无法直接单独查看子项目的修改记录，因为子项目的修改跟主项目的修改都合并到主项目中了。
+**subtree** 好在使用方便，一共就两三个命令，参数还是都一样的，使用起来很简单。缺点就是无法直接单独查看子项目的修改记录，因为子项目的修改跟主项目的修改都合并到主项目中了，污染主项目。
 
 
 
