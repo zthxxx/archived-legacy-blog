@@ -11,7 +11,9 @@ categories:
 
 ## 起始
 
-一直希望寻找一种相对优雅、我比较喜欢的方式来做**知识管理**，经过**手写笔记本、OneNote、Evernote、为知笔记**等之后，选择用 **个人 Wiki 系统** 来做自己的知识管理。但是天下 Wiki 千千万，到底选哪一种呢？
+**知识是自己构建出来的，不是别人灌输的，也不是看了各种资料背住就完了。**所谓构建，是指接受信息输入之后，通过信息整理加工，消化转变为**自己理解的内容**，并**分类**记录在脑部对应类别的不同层次区域。就像一个帝国的建立和发展过程，不断的累积资本，转化为力量。通过知识加工这个二次学习过程，能让我们更加牢固的记住关键知识和产生更加深入的理解。
+
+一直希望寻找一种相对优雅、我比较喜欢的方式来做**知识管理**，帮助知识积累构建，经过**手写笔记本、OneNote、Evernote、为知笔记**等之后，选择用 **个人 Wiki 系统** 来做自己的知识管理。但是天下 Wiki 千千万，到底选哪一种呢？
 
 我试了时下好几个流行的、推荐的比较多的 Wiki 系统，但是多少都有些小细节让我不是很满意。在我的 [Wiki 首页](http://wiki.zthxxx.me/wiki/index/) 可以看到我对知识管理和这几个 Wiki 系统的一些简单的看法，以及为此自己开坑了个 Wiki 的[轮子](https://github.com/zthxxx/hexo-theme-Wikitten)。
 
@@ -21,7 +23,7 @@ categories:
 
 - 界面简洁，排版整齐，有些留白，不要太满
 - 部署简单，不需要后台与数据库
-- 支持多级分类
+- 支持多级分类 （**满足知识的分类性**）
 - 分类目录可展开和收缩
 - 展开分类时可直接看到该分类下所有条目
 - 支持全文搜索
@@ -47,108 +49,96 @@ categories:
 
 
 
-## 汇总
+## 汇总参考
 
-顺便也说一下我用过的一些 Wiki 系统特点与跟我自己需求的差异吧。
+顺便也汇总说一下我用过的一些 Wiki 系统特点，与其跟我自身需求的差异吧。
+
+【注：以下仅代表个人观点，所述特点因个人关注点而带有严重片面性，轻喷】
 
 
 
-### **[Wikitten](https://wikitten.vizuina.com/)**
+### 00 - **[Wikitten](https://wikitten.vizuina.com/)**
 
 - 双栏
-
 - 界面简洁
-
 - 侧边可展开显示所有条目标题
-
 - 支持 Markdown 书写，支持多种语言
-
 - 支持切换到查看源码
+- ***不可全文搜索，只能搜索标题***
+- ***需要后台加数据库，部署繁琐***
 
-- *不可全文搜索，只能搜索标题*
-
-- *需要后台加数据库，部署繁琐*
-
-  ![Wikitten Preview](./WikittenPreview.jpg)
+![Wikitten Preview](./WikittenPreview.jpg)
 
 
 
-### **[TiddlyWiki](http://tiddlywiki.com/)** 
+### 01 - **[TiddlyWiki](http://tiddlywiki.com/)** 
 
 - 双栏
 - 侧边可展开显示所有条目标题
 - 全文可搜索
 - 功能丰富
-- *不支持 Markdown，而是 WikiText*
-- *单文件系统*
-
+- ***不支持 Markdown，而是 WikiText***
+- ***单文件系统***
 
 ![TiddlyWiki Preview](./TiddlyWikiPreview.jpg)
 
-### **[MediaWiki](https://www.mediawiki.org/wiki/MediaWiki)**
+### 02 - **[MediaWiki](https://www.mediawiki.org/wiki/MediaWiki)**
 
 - 全文可搜索
 - 功能丰富，定制程度高
 - 重量级，Wiki 系统中最强大
 - 支持查看历史版本
 - 适合大型项目，多人编辑
-- *不支持 Markdown*
-- *侧边不可展开显示所有条目标题*
-- *界面复杂、臃肿*
-- *需要后台与数据库，部署繁琐*
+- ***不支持 Markdown***
+- ***侧边不可展开显示所有条目标题***
+- ***界面复杂、臃肿***
+- ***需要后台与数据库，部署繁琐***
 
 ![MediaWiki Preview](./MediaWikiPreview.jpg)
 
 
 
-### **[Wiko](http://wzpan.github.io/hexo-theme-wixo/)**
+### 03 - **[Wiko](http://wzpan.github.io/hexo-theme-wixo/)**
 
 - 同为 Hexo 主题
 - 全文可搜索
 - 界面简洁
 - 支持 Markdown 书写
-- *不支持二级分类*
-- *侧边不可展开显示所有条目标题*
-- *搜索也只可以在首页进行搜索*
-- *配色不是很让我喜欢*
+- ***不支持二级分类***
+- ***侧边不可展开显示所有条目标题***
+- ***搜索也只可以在首页进行搜索***
+- ***配色不是很让我喜欢***
 
 ![Wixo Preview](./WixoPreview.jpg)
 
 
 
-### **[MDwiki](www.mdwiki.net)**
+### 04 - **[MDwiki](www.mdwiki.net)**
 
 - 界面简洁
-
 - 部署简单
-
 - 支持 Markdown 书写
+- ***无搜索功能***
+- ***不支持二级分类***
+- ***添加分类需手动修改主页顶栏***
+- ***不可展开显示所有条目标题***
+- ***纯静态，通过 AJAX 显示不同页面***
 
-- *无搜索功能*
-
-- *不支持二级分类*
-
-- *添加分类需手动修改主页顶栏*
-
-- *不可展开显示所有条目标题*
-
-- *纯静态，通过 AJAX 显示不同页面*
-
-  ![MDwiki Preview](./MDWikiPreview.jpg)
+![MDwiki Preview](./MDWikiPreview.jpg)
 
 
 
-### **[VimWiki](http://vimwiki.github.io/)**
+### 05 - **[VimWiki](http://vimwiki.github.io/)**
 
-- *无搜索功能*
-- *不支持 Markdown 语法（但有插件支持）*
-- *不习惯 Vim 的人很难适应*
+- ***无搜索功能***
+- ***不支持 Markdown 语法（但有插件支持）***
+- ***不习惯 Vim 的人很难适应***
 
 ![VimWiki Preview](./VimWikiPreview.jpg)
 
 
 
-### **[DokuWiki](https://www.dokuwiki.org/dokuwiki#)**
+### 06 - **[DokuWiki](https://www.dokuwiki.org/dokuwiki#)**
 
 - 类似 MediaWiki，但没那么强大
 
@@ -156,15 +146,14 @@ categories:
 
 
 
-### **[Simiki](http://simiki.org/)**
+### 07 - **[Simiki](http://simiki.org/)**
 
 - 单栏
 - 界面简洁
-- *不支持二级分类*
-- *不支持搜索*
-- *侧边不可展开显示所有条目标题*
-- *搜索也只可以在首页进行搜索*
 - 类似 Wixo
+- ***不支持二级分类***
+- ***不支持搜索***
+- ***侧边不可展开显示所有条目标题***
 
 ![Simiki Preview](SimikiPreview.jpg)
 
@@ -172,7 +161,7 @@ categories:
 
 ## 后续
 
-嘛，看了这么多，总的来说，**[hexo-theme-Wikitten](https://github.com/zthxxx/hexo-theme-Wikitten)** 的轮子还是很符合我自己的使用习惯，希望在用 Hexo 的有需要个人 Wiki 系统的也来使用下这个主题，后续一堆 Bug 和 TODO List 正在维护，欢迎有兴趣的来提提 Pull request。
+嘛，看了这么多，总的来说，**[hexo-theme-Wikitten](https://github.com/zthxxx/hexo-theme-Wikitten)** 的轮子还是很符合我自己的使用习惯；希望在用 Hexo 的朋友，有需要个人 Wiki 系统的，也来试一下下这个主题；后续一堆 Bug 和 TODO List 正在维护，欢迎有兴趣的来提提 Pull request。
 
 
 
