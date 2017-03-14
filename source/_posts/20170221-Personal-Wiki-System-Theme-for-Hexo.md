@@ -1,7 +1,7 @@
 ---
 title: Hexo 的个人 Wiki 主题 - Wikitten
 date: 2017-02-21 21:35:06
-updated: 2017-03-13 19:35:06
+updated: 2017-03-14 09:22:06
 banner:
 tags: [Hexo, 博客, Wiki]
 categories:
@@ -151,7 +151,7 @@ categories:
 
 ### 05 - **[VimWiki](http://vimwiki.github.io/)**
 
-- ***无搜索功能***
+- ***无搜索功能*** （感谢指正，有搜索但功能弱并且慢）
 - ***不支持 Markdown 语法（但有插件支持）***
 - ***不习惯 Vim 的人很难适应***
 
@@ -161,7 +161,12 @@ categories:
 
 ### 06 - **[DokuWiki](https://www.dokuwiki.org/dokuwiki#)**
 
-- 类似 MediaWiki，但没那么强大
+- 整体看上去类似 MediaWiki，但没那么强大
+- 更适合作为多人编辑的项目文档
+- ***虽然没数据库，但依然需要 PHP 做后台***
+- ***不支持 Markdown***
+- ***配置项目多，大部分教程都说到其配置复杂***
+- ***编辑器体验较差***
 
 ![DokuWiki Preview](./DokuWikiPreview.jpg)
 
