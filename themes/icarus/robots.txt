@@ -1,10 +1,12 @@
 User-agent: *
+
 Allow: /
+Allow: /tags/
 Allow: /archives/
+Allow: /categories/
 Allow: /about/
-Disallow: /vendors/
-Disallow: /js/
-Disallow: /css/
-Disallow: /vendor/
+
 Disallow: /content.json
 Disallow: /404.html
+
+Sitemap: /sitemap.xml
