@@ -62,20 +62,14 @@ $header-block-right
 #header-sub
     @media mq-mobile
         display: none
-    @media mq-mini
-        display: none
 
 #main-nav
     @extend $header-block
     @extend $header-block-left
     @media mq-mobile
         display: none
-    @media mq-mini
-        display: none
 
 #main-nav-mobile
-    @media mq-tablet
-        display: none
     @media mq-normal
         display: none
 
@@ -84,6 +78,9 @@ $nav-link
     float: left
     display: block
     padding: 0 15px
+    @media mq-mobile
+        padding: 0 13px
+        
 
 .nav-icon
     @extend $nav-link
@@ -121,7 +118,7 @@ $nav-link
             line-height: logo-height
 
 #search-form-wrap
-    @media mq-mini
+    @media mq-mobile
         display: none
     @extend $header-block
     @extend $header-block-right
@@ -184,7 +181,7 @@ $nav-link
         height: header-sub-height
         .search-form-input
             display: none
-            @media mq-mini
+            @media mq-mobile
                 display: block
             padding: 0 10px
             margin-right: 15px

@@ -1,8 +1,9 @@
 #sidebar
     @media mq-normal
         column(sidebar-column)
-    @media mq-tablet
-        column(sidebar-column-tablet)
+        if sidebar is right
+          float: right
+    
 
 .widget
     @extend $base-style
@@ -39,7 +40,7 @@
 
 .widget-wrap
     margin: block-margin 10px
-    @media mq-mini
+    @media mq-mobile
         margin: block-margin 20px
 
 .widget-title
@@ -101,15 +102,10 @@
     bottom: 20px
     position: fixed
     @media mq-mobile
-        width: 52px
-        height: 52px
+        width: 50px
+        height: 50px
         font-size: 34px
-        line-height: 52px
-    @media mq-mini
-        width: 48px
-        height: 48px
-        font-size: 32px
-        line-height: 48px
+        line-height: 50px
    
 
 #recent-post

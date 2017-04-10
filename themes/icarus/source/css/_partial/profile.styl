@@ -19,10 +19,11 @@
         border-bottom: none
 
 #profile
-    column(profile-column)
+    width: auto
     display: none
     @media mq-normal
         display: block
+        max-width: 312px
     .inner
         @extend $block
         margin-top: block-margin
@@ -118,7 +119,7 @@
         right: 20px
         z-index: 999
         display: block
-        min-width: 280px
+        min-width: 286px
         position: absolute
         .profile-inner
             position: relative
