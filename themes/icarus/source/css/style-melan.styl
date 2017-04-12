@@ -45,6 +45,15 @@ selection_clean()
     &::-moz-selection
         selection_style()
 
+// Comment option choose
+comment = hexo-config("customize.comment.disqus")
+if (not comment)
+    comment = hexo-config("customize.comment.duoshuo")
+if (not comment)
+    comment = hexo-config("customize.comment.youyan")
+if (not comment)
+    comment = "duoshuo" 
+        
 @import "_schemes/melan/body"
 @import "_schemes/melan/header"
 @import "_schemes/melan/profile"

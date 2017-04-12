@@ -4,6 +4,9 @@
 .article-inner
     @extend $block
     overflow: hidden
+    border-radius: 5px
+    @media mq-mobile
+        border-radius: 0px
 
 .article-banner
     width:100%
@@ -17,6 +20,7 @@
 
 .article-title
     font-size: 2em
+    font-weight: bold
     color: color-default
     text-decoration: none
     line-height: line-height-title
