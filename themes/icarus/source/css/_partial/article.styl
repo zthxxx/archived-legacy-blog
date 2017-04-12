@@ -113,8 +113,7 @@
     blockquote
         position: static
         font-family: font-serif
-        font-size: 1.1em
-        margin: 0 -20px
+        font-size: 1.05em
         padding: 10px 20px 10px 54px
         background: #fcfcfc
         border-left: 4px solid #eee
@@ -124,7 +123,7 @@
             float:left
             content: "\f10d"
             color: #e2e2e2
-            font-size: 32px;
+            font-size: 32px
             font-family: FontAwesome
             text-align: center
             position: relative
@@ -136,6 +135,12 @@
                 &:before
                     content: "—"
                     padding: 0 0.5em
+        @media mq-mobile
+            margin: 0 -20px
+            padding: 10px 20px 10px 20px
+            &:before
+                top: 0
+                left: -18px
     .pullquote
         text-align: left
         width: 45%
