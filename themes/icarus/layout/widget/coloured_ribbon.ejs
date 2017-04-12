@@ -1,0 +1,83 @@
+<canvas id="coloured-ribbon"></canvas>
+<script type="text/javascript">
+(function(CONFIG){
+  var alpha = CONFIG.alpha;
+  var baseSize = CONFIG.baseSize;
+  
+  var canvas = document.getElementById('coloured-ribbon');
+  var context = canvas.getContext('2d');
+  var pixelRatio = window.devicePixelRatio || 1;
+
+  canvas.width = window.innerWidth * pixelRatio;
+  canvas.height = window.innerHeight * pixelRatio;
+  context.scale(pixelRatio, pixelRatio);
+  context.globalAlpha = alpha;
+  
+  function ColouredRibbon(context, baseSize) {
+    var pi = Math.PI;
+    var cos = Math.cos;
+    var random = Math.random;
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    var colorStep = 0;
+    
+    function Triangle(height, baseSize) {
+      var baseHeight = height * 0.7;
+      return {
+        pointA: {
+          x: 0,
+          y: baseHeight + baseSize * random()
+        },
+        pointB: {
+          x: 0,
+          y: baseHeight - baseSize * random()
+        },
+        nextPoint: {
+          x: 0,
+          y: 0
+        }
+      };
+    }
+    
+    function randomPoint(basePoint, baseSize) {
+      var x, y;
+      x = basePoint.x + (random() * 2 - 0.25) * baseSize;
+      do {
+        y = basePoint.y + (random() * 2 - 1.1) * baseSize;
+      } while(y < 0 || y > height);
+      return {x:x, y:y};
+    }
+    
+    function drawTriangle(triangle, colorStep) {
+      var potA = triangle.pointA;
+      var potB = triangle.pointB;
+      var potC = triangle.nextPoint;
+      context.beginPath();
+      context.moveTo(potA.x, potA.y);
+      context.lineTo(potB.x, potB.y);
+      context.lineTo(potC.x, potC.y);
+      context.closePath();
+      context.fillStyle = '#'+(cos(colorStep)*127+128<<16 | cos(colorStep+2*pi/3)*127+128<<8 | cos(colorStep+4*pi/3)*127+128).toString(16);
+      context.fill();
+    }
+    
+    function drawRibbon(triangle, size) {
+      while(triangle.pointA.x < width) {
+        triangle.nextPoint = randomPoint(triangle.pointB, baseSize);
+        drawTriangle(triangle, colorStep+=pi/25);
+        triangle.pointA = triangle.pointB;
+        triangle.pointB = triangle.nextPoint;
+      }
+    }
+    
+    function redrawRibbon() {
+      context.clearRect(0, 0, width, height);
+      drawRibbon(new Triangle(height, baseSize));
+    }
+    
+    redrawRibbon();
+    return redrawRibbon;
+  }
+  document.onclick = ColouredRibbon(context, baseSize);    
+})({alpha: 0.6, baseSize: 90});
+</script>
