@@ -6,6 +6,8 @@
         <%- partial('comment/duoshuo') %>
     <% } else if (theme.comment.youyan) { %>
         <%- partial('comment/youyan') %>
+    <% } else if (theme.comment.changyan && theme.comment.changyan.appid && theme.comment.changyan.conf) { %>
+        <%- partial('comment/changyan') %>
     <% } %>
     </section>
 <% } %>

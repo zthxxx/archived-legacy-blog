@@ -46,13 +46,15 @@ selection_clean()
         selection_style()
 
 // Comment option choose
-comment = hexo-config("customize.comment.disqus")
-if (not comment)
-    comment = hexo-config("customize.comment.duoshuo")
-if (not comment)
-    comment = hexo-config("customize.comment.youyan")
-if (not comment)
-    comment = "duoshuo" 
+comment = ""
+if hexo-config("customize.comment.disqus")
+    comment = disqus
+else if hexo-config("customize.comment.duoshuo")
+    comment = duoshuo
+else if hexo-config("customize.comment.youyan")
+    comment = youyan
+else if (hexo-config("customize.comment.changyan") && hexo-config("customize.comment.changyan.appid") && hexo-config("customize.comment.changyan.conf"))
+    comment = changyan
         
 @import "_schemes/melan/body"
 @import "_schemes/melan/header"

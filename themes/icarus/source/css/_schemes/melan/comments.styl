@@ -1,4 +1,5 @@
 $comments-avatar-size = 50px
 #comments
     border-radius: 0
-@import "_schemes/melan/comment-" + comment
+if comment
+    @import "_schemes/melan/comment-" + comment

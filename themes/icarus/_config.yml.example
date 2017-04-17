@@ -68,6 +68,9 @@ comment:
     disqus: # enter disqus shortname here
     duoshuo: # enter duoshuo shortname here
     youyan: # enter youyan uid here
+    changyan: # please fill in `appid` and `conf` to enable
+        appid: # changyan APP ID
+        conf: # changyan conf in code
 
 # Share
 share: default # options: jiathis, bdshare, addtoany, default

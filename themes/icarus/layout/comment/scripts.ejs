@@ -4,4 +4,6 @@
     <%- partial('comment/duoshuo', { script: true }) %>
 <% } else if (theme.comment.youyan) { %>
     <%- partial('comment/youyan', { script: true }) %>
+<% } else if (theme.comment.changyan && theme.comment.changyan.appid && theme.comment.changyan.conf) { %>
+    <%- partial('comment/changyan', { script: true }) %>
 <% } %>
