@@ -5,7 +5,7 @@ update: 2016-12-10 22:14:43
 layout: post
 ---
 
-
+如未单独指出，则本文所有文章均基于 **[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)** 发布，转载请注明出处。
 
 ##  关于我自己
 

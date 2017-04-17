@@ -1,6 +1,7 @@
 ---
-title: 【译】深入理解 Python 字典实现过程
+title: "[译] 深入理解 Python 字典实现过程"
 date: 2017-03-26 15:37:06
+update: 2017-04-17 12:34:56
 banner:
 tags: [Python]
 categories: [程序语言, Python]
@@ -11,9 +12,11 @@ categories: [程序语言, Python]
 > - 译文出自：[zthxxx's blog](https://blog.zthxxx.me/posts/python-dictionary-implementation/)
 > - 译者：[zthxxx](https://github.com/zthxxx)
 > - 校对者：[Zheaoli](https://github.com/Zheaoli)
-
+> - 注：原文与本译文均基于 **CC BY-NC-SA** 发布
 
 字典是一种内置于 Python 中非常有用的数据类型，总的来说它是一些由键（key）索引的对象，这里的 key 是必须是不可变的。 以下是一个简单的字典用法示例：
+
+<!--more-->
 
 ```python
 >>> d = {'fengsp': 10, 'amy': 12}
