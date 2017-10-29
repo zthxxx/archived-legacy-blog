@@ -1,7 +1,7 @@
 ---
 title: Merry Christmas !
 date: 2016-12-25 04:51:24
-banner: /images/MerryChristmas.jpg
+banner: /images/cover-banner/MerryChristmas.jpg
 tags: [Christmas]
 categories:
   - Life

@@ -2,7 +2,7 @@
 title: Hexo 的个人 Wiki 主题 - Wikitten
 date: 2017-02-21 21:35:06
 updated: 2017-03-20 13:07:06
-banner: "/images/Wiki.jpg"
+banner: /images/cover-banner/Wiki.jpg
 tags: [Hexo, 博客, Wiki]
 categories:
   - 编程开发

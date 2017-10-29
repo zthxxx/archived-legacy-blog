@@ -1,12 +1,12 @@
 ---
 title: {{ title }}
 date: {{ date }}
-banner: 
+update: {{ date }}
+banner: /images/cover-banner/default-banner.jpg
 tags: 
 categories: 
 ---
 
-## Title
-
+## title
 
 

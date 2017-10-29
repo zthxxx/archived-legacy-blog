@@ -1,20 +1,66 @@
 <% if (typeof(script) !== 'undefined' && script) { %>
     <script>
-    var disqus_config = function () {
-        <% if (page.permalink) { %>
-            this.page.url = '<%= page.permalink %>';
-        <% } %>
-        this.page.identifier = '<%= page.disqusId || page.slug %>';
-    };
-    (function() { 
-        var d = document, s = d.createElement('script');  
-        s.src = '//' + '<%= theme.comment.disqus %>' + '.disqus.com/<% if (page.comments) { %>embed.js<% } else { %>count.js<% } %>';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
+        var disqus_config = function () {
+            <% if (page.permalink) { %>
+                this.page.url = '<%= page.permalink %>';
+            <% } %>
+            this.page.identifier = '<%= page.disqusId || page.slug %>';
+        };
+        (function() { 
+            var d = document, s = d.createElement('script');  
+            s.src = '//' + '<%= theme.comment.disqus %>' + '.disqus.com/<% if (page.comments) { %>embed.js<% } else { %>count.js<% } %>';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
 <% } else { %>
     <div id="disqus_thread">
+        <style>
+          .disqus-loading {
+            overflow: hidden;
+          }
+          .disqus-loading p {
+            margin: 1.7rem auto 1rem;
+          }
+          .disqus-load-box {
+            overflow: hidden;
+            position: relative;
+            margin: 0px auto;
+            box-sizing: border-box;
+            width: 54px;
+            height: 52px;
+            background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAABoCAMAAACNH/NoAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAYUExURUxpcTM2Ot/k7TM2Ot/k7TM2Ot/k7d/k7cg2dn4AAAAIdFJOUwBlZSc0SVMZsE4j8AAAAedJREFUWMPVVtuWwyAITMrt//94c7JJvKGOtHv2lKfWODKAwmyba0Qi+2EiQrRhRiciMwGQtHtGEdAMKHvfBHB1Z4LyQGmMqlKQkDQgKINv1PMl46LQEio5JA9F89o4ZxFQU2lWZneoOXsSV4nr/Z3QpMIZ8kCK8wl0VjkQ1Nm1VbIjwDec9hKWxprZAscwLFFbCe13dxC2/w9MvoFkoADBcq/D6I2rvBJc/qIXWObMgk0BD65oQTjJxtkOo3anGy00c7S5lqMjJYRoYVBdcmc24KoNBMmPZggLolvake/oFtqmAiOXMJL9nMiZUv3B4ok+IdWiwjAsQx/RK4ui9zBjVn29VJXZUMwBKAxB8ssx5QDoBNoCvQLYRWWkzJ7cPKs2JlilwNKHAYq9enS/8TD0O2r2UTzLsXnZ4HltCpxOUTdOmxWGLlC2a1zPilN1DHDJS3cQxeZ8xig+DiyjzBAs9wBGlqJb5XgxswfGICxt1v5b6rDUxdDCsLT7DZh+A+yvU5IKECx38HIFr7LFHk70mQabAg4rWhBMsmh4eEq06Xd4l2QnTHx0PAkxGwqQalCdhFV14rRCWaV4NmwIK6BbnJE/V0qewEhq6VBzuJw55R9fu3DxZB+QaidQA8IwLEOT6NW+6P0BE1MPH4Cb+l0AAAAASUVORK5CYII=");
+            background-repeat: no-repeat;
+          }
+          .disqus-load-icon {
+            position: absolute;
+            top: 13px;
+            left: 15px;
+            box-sizing: border-box;
+            border-width: 3px;
+            border-style: solid;
+            border-color: rgba(51, 54, 58, 0.4) transparent;
+            border-radius: 13px;
+            width: 26px;
+            height: 26px;
+          }
+          @keyframes spin {
+            0%   { transform: rotate(360deg); }
+            100% { transform: rotate(0deg); }
+          }
+          @keyframes breathing {
+            0%   { opacity:  1; }
+            50%  { opacity: .3; }
+            100% { opacity:  1; }
+          }
+          .spin-breathing { animation: spin 800ms infinite linear, breathing 1600ms infinite linear; }
+        </style>
+        <div class="disqus-loading" dir="ltr">
+            <div class="disqus-load-box">
+                <div class="disqus-load-icon spin-breathing"></div>
+            </div>
+            <p align="center">跨过长城，阅读评论。「请确保 disqus 能正常加载」</p>
+        </div>
         <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 <% } %>
