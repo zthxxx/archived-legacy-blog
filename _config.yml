@@ -126,14 +126,6 @@ jsonContent:
 ### Creat sitemap
 sitemap:
   path: sitemap.xml
-baidusitemap:
-  path: baidusitemap.xml
-
-baidu_url_submit:
-  count: 5 # Count for urls submit to baidu zhanzhang
-  host: blog.zthxxx.me # Your host site address which need registe in baidu zhanzhang
-  path: site_recent_urls.txt # File name in local with record recent url of blog
-  token: # baidu zhanzhang initiative push token
 
 ### Adds nofollow attribute to all external links in your hexo blog posts automatically.
 nofollow:
