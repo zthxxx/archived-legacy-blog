@@ -1,6 +1,5 @@
 <%- partial('common/head') %>
 <body>
-    <%- partial(`schemes/${theme.scheme.style}_style`) %>
     <div id="container">
         <%- partial('common/header') %>
         <div class="outer">
@@ -16,6 +15,7 @@
         </div>
         <%- partial('common/footer', null, {cache: !config.relative_link}) %>
         <%- partial('common/scripts') %>
+        <%- partial(`schemes/${theme.scheme.style}_style`) %>
     </div>
     <%- partial('widget/coloured_ribbon') %>
 </body>

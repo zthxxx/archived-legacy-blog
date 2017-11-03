@@ -5,6 +5,8 @@ index:
     category: '分類'
     uncategorized: '未分類'
     tag: '標籤'
+    inner_world: '裏世界'
+    surface_world: '表世界'
 nav:
     next: '下一頁'
     prev: '上一頁'

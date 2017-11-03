@@ -1,4 +1,5 @@
-<script type="text/javascript">
+<script>
+(function($){
     function getUrlParam(paramName) {
         var paramValue = "", isFound = !1;
         if (this.location.search.indexOf("?") == 0 && this.location.search.indexOf("=") > 1) {
@@ -8,6 +9,7 @@
         if (paramValue == "") paramValue = undefined;
         return paramValue;
     }
+
     function setRandomBackImg() {
         var img_path = "<%- theme.scheme.melan.background_images_path %>";
         var horizontal_img_count = <%- theme.scheme.melan.background_images_count.horizontal_img_count %>;
@@ -22,22 +24,23 @@
             document.body.style.backgroundImage = "url(" + img_path + "img_" + background_image_index + ".jpg)";
         }
     }
+
     function setMelanStyle(enable) {
         if (enable) {
-            setRandomBackImg();
             $("head").append("<link>").children(":last").attr({rel: "stylesheet", type: "text/css", href: "/css/style-melan.css"});
+            setRandomBackImg();
         } else {
             document.body.style.backgroundImage = "none";
             $('link[rel="stylesheet"][href$="/css/style-melan.css"]').remove();
         }
     }
+
     function setStyleReverseTag() {
-        $("a[href='javascript:reverseSchemes();']").each(
-            function() {
-                this.text = $.cookie("scheme") == "melan" ? "表世界" : "里世界" ;
-            }
-        );
+        $("#world-reverse")[0].text = $.cookie("scheme") == "melan" ? 
+        "<%= __('index.surface_world') %>" : 
+        "<%= __('index.inner_world') %>" ;
     }
+
     function reverseSchemes() {
         if ($.cookie("scheme") != "melan") {
             $.cookie("scheme", "melan", { expires: 365, path: '/' });
@@ -48,11 +51,18 @@
         }
         setStyleReverseTag();
     }
+
     if (getUrlParam("scheme") == "icarus") {
         $.cookie("scheme", "icarus", { expires: 365, path: '/' });
     } else if (getUrlParam("scheme") == "melan") {
         $.cookie("scheme", "melan", { expires: 365, path: '/' });
     }
+
+    $("#world-reverse").click(function(e) {
+        reverseSchemes();
+    });
+
     setMelanStyle($.cookie("scheme") == "melan");
     $(setStyleReverseTag);
+})(jQuery);
 </script>

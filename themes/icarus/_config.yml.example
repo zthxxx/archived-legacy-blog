@@ -5,7 +5,6 @@ menu:
   分类: /categories
   标签: /tags
   关于: /about
-  里世界: javascript:reverseSchemes();
 
 # Customize
 customize:
@@ -27,9 +26,9 @@ customize:
     thumbnail: true # enable posts thumbnail, options: true, false
     favicon: /favicon.ico # path to favicon
     social_links:
-        github: https://github.com/zthxxx/zthxxx.github.io
-        stack-overflow: http://stackoverflow.com/users/7277090/zthxxx?tab=profile
-        codepen: http://codepen.io/zthxxx/
+        github: https://github.com/zthxxx
+        twitter: https://twitter.com/tancolat
+        codepen: http://codepen.io/zthxxx
         rss: /atom.xml
     social_link_tooltip: true # enable the social link tooltip, options: true, false
 

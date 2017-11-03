@@ -5,6 +5,8 @@ index:
     category: '分类'
     uncategorized: '未分类'
     tag: '标签'
+    inner_world: '里世界'
+    surface_world: '表世界'
 nav:
     next: '下一页'
     prev: '上一页'

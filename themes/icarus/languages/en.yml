@@ -5,6 +5,8 @@ index:
     category: 'category'
     uncategorized: 'uncategorized'
     tag: 'tag'
+    inner_world: '里世界'
+    surface_world: '表世界'
 nav:
     next: 'Next'
     prev: 'Prev'
