@@ -36,9 +36,14 @@
     }
 
     function setStyleReverseTag() {
-        $("#world-reverse")[0].text = $.cookie("scheme") == "melan" ? 
-        "<%= __('index.surface_world') %>" : 
-        "<%= __('index.inner_world') %>" ;
+        var world = $.cookie("scheme") == "melan" ? 
+                    "<%= __('index.surface_world') %>" : 
+                    "<%= __('index.inner_world') %>" ;
+        $(".world-reverse").each(
+            function() {
+              this.text = world;
+            }
+        );
     }
 
     function reverseSchemes() {
@@ -58,7 +63,7 @@
         $.cookie("scheme", "melan", { expires: 365, path: '/' });
     }
 
-    $("#world-reverse").click(function(e) {
+    $(".world-reverse").click(function(e) {
         reverseSchemes();
     });
 

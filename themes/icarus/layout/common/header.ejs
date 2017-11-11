@@ -10,7 +10,7 @@
                     <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
                 <% } %>
                 <% if (theme.scheme.style === 'melan') { %>
-                    <a class="main-nav-link" id="world-reverse" href="#"><%= __('index.inner_world') %></a>
+                    <a class="main-nav-link world-reverse" href="#"><%= __('index.inner_world') %></a>
                 <% } %>
             </nav>
             <% if(theme.customize.profile && theme.customize.profile.enabled) { %>
@@ -32,6 +32,9 @@
             <tr>
                 <% for (var i in theme.menu) { %>
                     <td><a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a></td>
+                <% } %>
+                <% if (theme.scheme.style === 'melan') { %>
+                    <td><a class="main-nav-link world-reverse" href="#"><%= __('index.inner_world') %></a></td>
                 <% } %>
                 <td>
                     <%- partial('search/index-mobile') %>
