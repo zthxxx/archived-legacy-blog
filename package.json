@@ -10,7 +10,8 @@
     "build-dev": "hexo clean && hexo g",
     "new": "hexo new draft",
     "post": "hexo publish",
-    "dev": "hexo clean && hexo s -g --draft"
+    "dev": "hexo clean && hexo s -g --draft",
+    "push-theme": "git subtree push --prefix=themes/icarus icarus master --squash"
   },
   "dependencies": {
     "gulp": "^3.9.1",
