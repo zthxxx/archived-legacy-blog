@@ -10,7 +10,7 @@ update: 2017-10-29 17:30:27
 
 > - 原文地址：[Using Cmder with Hyper](http://blog.bsinky.com/programming/tools/2017/06/11/using-cmder-with-hyper.html)
 > - 原文作者：[Benjamin Sinkula](https://github.com/bsinky)
-> - 译文出自：[zthxxx's blog](https://blog.zthxxx.me/posts/Using-Cmder-with-Hyper/)
+> - 译文出自：[zthxxx's blog](https://legacy.blog.zthxxx.me/posts/Using-Cmder-with-Hyper/)
 > - 译者：[zthxxx](https://github.com/zthxxx)
 > - 注：本译文基于 **CC BY-NC-ND 4.0** 发布
 

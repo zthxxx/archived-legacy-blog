@@ -10,4 +10,4 @@ Allow: /about/
 Disallow: /content.json
 Disallow: /404.html
 
-Sitemap: http://blog.zthxxx.me/sitemap.xml
+Sitemap: http://legacy.blog.zthxxx.me/sitemap.xml
