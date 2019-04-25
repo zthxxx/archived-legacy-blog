@@ -12,7 +12,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://legacy.blog.zthxxx.me
+url: https://legacy-blog.zthxxx.me
 root: /
 permalink: posts/:title/
 permalink_defaults:
@@ -132,7 +132,7 @@ nofollow:
   enable: true
   exclude:
     - zthxxx.me
-    - legacy.blog.zthxxx.me
+    - legacy-blog.zthxxx.me
 
 ## Themes: https://hexo.io/themes/
 theme: icarus
